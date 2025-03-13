@@ -1,31 +1,26 @@
 using UnityEngine;
 
+
 public class movimiento : MonoBehaviour
 {
-    public Transform from;
-    public Transform to;
 
-    public float smoothRotation;
+    public float speedX; 
+    public float speedY;
 
-    private float timeCount = 0.0f;
+    public bool isHorizontal;
 
     void Update()
     {
-        transform.rotation = Quaternion.Slerp(from.rotation, to.rotation, timeCount);
-        timeCount = (timeCount + Time.deltaTime * smoothRotation);
+        Move();
     }
 
-    // Update is called once per frame
-    //void Update()
-    //{
-    //    // teleportar al objeto a la nueva posicion
-    //    //transform.position = new Vector3(1,2,transform.position.z + move);
-    //    //transform.position += Vector3.forward * move;
+    void Move()
+    {
+        transform.position += new Vector3(speedX, speedY, 0);
+    }
 
-    //    transform.Rotate(Vector3.up, 0.1f);
-    //    //transform.rotation = new Quaternion(90,45,45,30);
 
-    //    // Esto mueve el objeto de forma fisica
-    //    //transform.Translate(new Vector3(0, 0, transform.position.z + move) * Time.deltaTime);
-    //}
+    // Memory creando una funcion: Horizontal.Move(); Pesara 100MB
+    // Memory creando una funcion: Vertical.Move(); Pesara 100MB
+    // 200MB
 }
