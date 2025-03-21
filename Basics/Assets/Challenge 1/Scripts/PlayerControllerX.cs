@@ -50,9 +50,7 @@ public class PlayerControllerX : MonoBehaviour
     {
         // get the user's vertical input
         verticalInput = Input.GetAxis("Vertical");
-        rotX = transform.eulerAngles.x;
-
-        print(rotX);
+        rotX = transform.eulerAngles.x; 
 
         if (encendido)
         {
