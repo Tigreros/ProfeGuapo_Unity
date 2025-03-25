@@ -148,6 +148,10 @@ GameObject:
   m_Component:
   - component: {fileID: 170076735}
   - component: {fileID: 170076734}
+  - component: {fileID: 170076737}
+  - component: {fileID: 170076736}
+  - component: {fileID: 170076739}
+  - component: {fileID: 170076738}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -235,6 +239,78 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 71.09901, y: -97.191, z: -73.73801}
+--- !u!114 &170076736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170076733}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47616c995fcaa244a46154a977dea3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ruta: C:/Users/Profesor/Documents/Curso Tarde/Unity/ProfeGuapo_Unity/Basics/Assets/StreamingAssets\enemigos.json
+  contenido: "{\r\n    \"enemigos\" : [\r\n        {\r\n            \"nombre\" :
+    \"Goblin\",\r\n            \"vida\" : 50\r\n        },\r\n        {\r\n           
+    \"nombre\" : \"Troll\",\r\n            \"vida\" : 200\r\n        },\r\n       
+    {\r\n            \"nombre\" : \"Abuelo\",\r\n            \"vida\" : 10\r\n       
+    },        {\r\n            \"nombre\" : \"Abuela\",\r\n            \"vida\" :
+    200\r\n        }\r\n    ]\r\n}"
+--- !u!114 &170076737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170076733}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d231948e0c15cc428d4b76c6e7a3cc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ruta: C:/Users/Profesor/Documents/Curso Tarde/Unity/ProfeGuapo_Unity/Basics/Assets/StreamingAssets\MiPrimerJson.json
+  contenido: "{\r\n    \"nombre\" : \"Daniela\",\r\n    \"vida\" : 1000,\r\n    \"dinero\"
+    : 1000,\r\n    \"dineroMucho\" : 10500\r\n}"
+--- !u!114 &170076738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170076733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98ec6f51ddaf8f64ca73c3b1fdb9067e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PJname: ElProfeGuapo
+  level: 100
+  life: 1
+--- !u!114 &170076739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170076733}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ffa19458a41da44fa21bc556301d045, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ruta: C:/Users/Profesor/Documents/Curso Tarde/Unity/ProfeGuapo_Unity/Basics/Assets/StreamingAssets\JsonAnidado.json
+  contenido: "{\r\n    \"nombre\" : \"Knight\",\r\n    \"stats\" : \r\n    {\r\n   
+    \"vida\" :\r\n        {\r\n            \"porcentaje\" : 50,\r\n            \"Estado\"
+    : \"Estas Topemalo\"\r\n        },\r\n    \"mana\" : 40\r\n    }\r\n}"
+  pj:
+    nombre: Knight
+    stats:
+      vida:
+        porcentaje: 50
+        Estado: Estas Topemalo
+      mana: 40
 --- !u!1 &181819514
 GameObject:
   m_ObjectHideFlags: 0
@@ -2980,7 +3056,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -250.4, y: -397.1}
+  m_AnchoredPosition: {x: -250.4, y: -200}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1873140753
@@ -3175,6 +3251,127 @@ Transform:
   - {fileID: 1667803327}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2101116432
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2101116436}
+  - component: {fileID: 2101116435}
+  - component: {fileID: 2101116434}
+  - component: {fileID: 2101116433}
+  - component: {fileID: 2101116437}
+  m_Layer: 0
+  m_Name: Cube (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &2101116433
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101116432}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &2101116434
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101116432}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2101116435
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101116432}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &2101116436
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101116432}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 162.3158, y: 65.52965, z: -39.81205}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2101116437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101116432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6fb4e955fadab246822d4743af982b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3193,3 +3390,4 @@ SceneRoots:
   - {fileID: 1602304625}
   - {fileID: 783757221}
   - {fileID: 194002144}
+  - {fileID: 2101116436}
