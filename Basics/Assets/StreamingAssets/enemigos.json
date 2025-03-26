@@ -1,5 +1,20 @@
 {
-    "nombre" : "",
-    "nivel" : 0,
-    "vida" : 0
+	"enemigos" : [
+		{
+			"nombre" : "Goblin",
+			"vida" : 50,
+			"dano" : 34
+		},
+		{
+			"nombre" : "Orco",
+			"vida" : 200,
+			"dano" : 31
+			
+		},
+		{
+			"nombre" : "Esqueleto",
+			"vida" : 10,
+			"dano" : 32
+		}
+	]
 }
