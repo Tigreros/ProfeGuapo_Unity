@@ -8,7 +8,7 @@ public class GuardadoDatosPersonaje : MonoBehaviour
 
     void Start()
     {
-        GuardadoCargaDatosPersonaje.OnBotonPresionadoGuardado += SaveData;
+        //GuardadoCargaDatosPersonaje.OnBotonPresionadoGuardado += SaveData;
         //print("")
     }
 

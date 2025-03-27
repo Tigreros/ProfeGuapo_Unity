@@ -10,7 +10,7 @@ public class CargaDatosPersonaje : MonoBehaviour
 
     private void Start()
     {
-        GuardadoCargaDatosPersonaje.OnBotonPresionadoCarga += Lectura;
+        //GuardadoCargaDatosPersonaje.OnBotonPresionadoCarga += Lectura;
     }
 
     [ContextMenu("Lectura")]
