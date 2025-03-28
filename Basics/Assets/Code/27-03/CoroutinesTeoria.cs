@@ -22,7 +22,7 @@ public class CoroutinesTeoria : MonoBehaviour
         }
         else
         {
-            print("Hola");
+            //print("Hola");
             yield return new WaitForSeconds(3);
             StartCoroutine("Mensaje");
         }

@@ -32,7 +32,9 @@ public class DelegateExample : MonoBehaviour
     {
         Debug.Log("Modo Fácil activado");
     }
-    void MensajeNormal() => Debug.Log("Modo Normal activado");
+    void MensajeNormal(){
+        //Debug.Log("Modo Normal activado");
+    }
     void MensajeDificil()
     {
         Debug.Log("Modo Dificil activado");
