@@ -14,7 +14,7 @@ public class I_Candle : MonoBehaviour, IHitable, IHealable
         }
     }
 
-    public void TakeHit()
+    public void TakeHit(int damage)
     {
         if (this.enabled)
         {

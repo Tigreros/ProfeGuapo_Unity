@@ -47,7 +47,7 @@ public class WeaponWithEffect : MonoBehaviour
 
             if (target != null)
             {
-                target.TakeHit();
+                target.TakeHit(1);
                 effect?.ApplyEffect(hit.collider.gameObject);
             }
 
