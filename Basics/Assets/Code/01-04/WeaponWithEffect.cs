@@ -43,12 +43,19 @@ public class WeaponWithEffect : MonoBehaviour
         if (Physics.Raycast(gameObject.transform.GetChild(6).transform.position, transform.forward, out hit, attackRange))
         {
             IHitable target = hit.collider.gameObject.GetComponent<IHitable>();
+            ISwitchable targetswitch = hit.collider.gameObject.GetComponent<ISwitchable>();
 
             if (target != null)
             {
                 target.TakeHit();
                 effect?.ApplyEffect(hit.collider.gameObject);
             }
+
+            if (targetswitch != null)
+            {
+                targetswitch.Toggle();
+            }
+
         }
 
 
