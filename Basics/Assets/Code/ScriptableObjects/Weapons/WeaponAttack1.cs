@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class WeaponAttack : MonoBehaviour
+public class WeaponAttack1 : MonoBehaviour
 {
 
     public WeaponData weaponData;
