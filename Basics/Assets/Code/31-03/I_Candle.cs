@@ -1,9 +1,11 @@
 using UnityEngine;
 
-public class I_Candle : MonoBehaviour, IHitable, IHealable
+public class I_Candle : MonoBehaviour, IHitable, IHealable, IStatusEffectReceiver
 {
 
     private int health = 100;
+
+    public GameObject[] dropObject;
 
     public void Heal(int amount)
     {
@@ -14,13 +16,24 @@ public class I_Candle : MonoBehaviour, IHitable, IHealable
         }
     }
 
-    public void TakeHit(int damage)
+    public void TakeHit(float damage)
     {
+        //dropObject = new WeaponData[3];
+
         if (this.enabled)
         {
-            Debug.Log("Vela se rompe " + transform.name);
+            Debug.Log("Vela se rompe " + transform.name + "damage: " + damage);
+            //Debug.Log($"{gameObject.name} recibio {damage} de daño. Vida actual: {health}");
+            Instantiate(dropObject[Random.Range(0, 3)], transform.position, transform.rotation);
             Destroy(gameObject, 1);
         }
+    }
+
+
+    public void ApplyEffect(StatusEffect effect)
+    {
+        Debug.Log("Le hemos aplicado: " + effect);
+        Destroy(gameObject);
     }
 
 }
