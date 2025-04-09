@@ -12,6 +12,7 @@ public class WeaponPickup : MonoBehaviour
         if(inv != null)
         {
             inv.AddWeapon(weaponToGive);
+            Debug.Log(weaponToGive.description);
             //Debug.Log($" El arma recogida es: {weaponToGive.weaponName}");
             Destroy(gameObject);
         }
