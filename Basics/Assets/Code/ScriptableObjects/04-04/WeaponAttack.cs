@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem.HID;
 
 public class WeaponAttack : MonoBehaviour
 {
@@ -29,31 +30,59 @@ public class WeaponAttack : MonoBehaviour
         WeaponData weapon = inventory.equippedWeapon;
         RaycastHit hit;
 
-        //Debug.Log(weapon.rarity);
-
-        /*switch (weapon.rarity)
-        {
-            case WeaponRarity.Commom:
-                Debug.Log("Atacamos con basica");
-                break;
-            case WeaponRarity.Rare:
-                Debug.Log("Atacamos con rara");
-                break;
-            case WeaponRarity.Epic:
-                Debug.Log("Atacamos con epica");
-                break;
-            case WeaponRarity.Legendary:
-                Debug.Log("Atacamos con legendaria");
-                break;
-        }*/
-
         if(Physics.Raycast(attackPoint.transform.position, attackPoint.transform.forward, out hit, weapon.range))
         {
             IHitable target = hit.collider.GetComponent<IHitable>();
-            Debug.Log("NOne");
 
-            if(target != null)
+            if (target != null)
             {
+                float multiplier = GetDamageMultiplier(weapon.rarity);
+                float finalDamage = weapon.damage * multiplier;
+
+                target.TakeHit(finalDamage);
+                Debug.Log($"Hemos atacado con {weapon.weaponName}({weapon.rarity}), y hemos causado {finalDamage} de daño.");
+
+                ApplyEffectIfAny(hit.collider, weapon);
+            }
+        }
+    }
+
+    private float GetDamageMultiplier(WeaponRarity rarity)
+    {
+        switch (rarity)
+        {
+            case WeaponRarity.Commom:       return 1.0f;
+            case WeaponRarity.Rare:         return 1.2f;
+            case WeaponRarity.Epic:         return 1.5f;
+            case WeaponRarity.Legendary:    return 2.0f;
+
+            default: return 1.0f;
+        }
+    }
+
+    private void ApplyEffectIfAny(Collider targetCollider, WeaponData weapon)
+    {
+        if (weapon.effectType != StatusEffectType.None)
+        {
+            IStatusEffectReceiver receiver = targetCollider.GetComponent<IStatusEffectReceiver>();
+            if (receiver != null)
+            {
+                receiver.ApplyEffect(new StatusEffect(weapon.effectType, 5));
+                Debug.Log("Le hemos aplicado tal efecto: " + weapon.effectType);
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+/*
 
                 if (weapon.rarity == WeaponRarity.Legendary)
                 {
@@ -111,7 +140,4 @@ public class WeaponAttack : MonoBehaviour
                 }
 
                 Debug.Log($"Hemos atacado con {weapon.weaponName}. Con un daño de : {weapon.damage} Pts.");
-            }
-        }
-    }
-}
+*/

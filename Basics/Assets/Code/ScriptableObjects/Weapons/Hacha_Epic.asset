@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f7c17560434cc4b4db8269f3fae850a5, type: 3}
-  m_Name: DragonSword
+  m_Name: Hacha_Epic
   m_EditorClassIdentifier: 
-  weaponName: DragonSword
-  damage: 650
-  range: 10
-  weaponPrefab: {fileID: 0}
-  level: 50
-  rarity: 3
+  weaponName: AxeEpic
+  damage: 30
+  range: 1
+  weaponPrefab: {fileID: 1008300608424116284, guid: d7fe98a79aa55504a97ef84a8c05eb84, type: 3}
+  level: 1
+  rarity: 2
   effectType: 2

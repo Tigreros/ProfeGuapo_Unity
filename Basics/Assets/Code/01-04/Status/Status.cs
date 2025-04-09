@@ -1,6 +1,5 @@
 public enum StatusEffectType
 {
-
     Burn,
     Freeze,
     Poison,

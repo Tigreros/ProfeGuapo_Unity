@@ -22,36 +22,24 @@ public class WeaponData : ScriptableObject
         clone.damage += 5 * clone.level;
 
 
-        if (clone.level >= 3)
+        /*if (clone.level >= 3)
         {
             clone.rarity = WeaponRarity.Rare;
-            if (clone.effectType == StatusEffectType.None)
-            {
-                clone.effectType = StatusEffectType.Burn;
-            }
         }
 
         if(clone.level >=5)
         {
             clone.rarity = WeaponRarity.Epic;
-
-            if (clone.effectType == StatusEffectType.Burn)
-            {
-                clone.effectType = StatusEffectType.Freeze;
-            }
         }
 
         if (clone.level >=7)
         {
             clone.rarity = WeaponRarity.Legendary;
-            if (clone.effectType == StatusEffectType.Freeze)
-            {
-                clone.effectType = StatusEffectType.Poison;
-            }
-        }
-
-
+        }*/
+        clone.rarity = this.rarity;
+        clone.effectType = this.effectType;
         clone.weaponName = this.weaponName + $" + {clone.level}";
+
         return clone;
     }
 }
