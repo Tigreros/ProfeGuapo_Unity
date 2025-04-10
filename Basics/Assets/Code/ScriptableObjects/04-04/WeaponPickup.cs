@@ -12,7 +12,8 @@ public class WeaponPickup : MonoBehaviour
         if(inv != null)
         {
             inv.AddWeapon(weaponToGive);
-            Debug.Log(weaponToGive.description);
+            ManagerLog.instance_Log.Log($"Hemos recogido, {weaponToGive.weaponName} ({weaponToGive.rarity})" , "pickUp");
+            //Debug.Log(weaponToGive.description);
             //Debug.Log($" El arma recogida es: {weaponToGive.weaponName}");
             Destroy(gameObject);
         }
