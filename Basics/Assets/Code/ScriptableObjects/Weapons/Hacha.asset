@@ -16,3 +16,9 @@ MonoBehaviour:
   damage: 30
   range: 1
   weaponPrefab: {fileID: 1008300608424116284, guid: d7fe98a79aa55504a97ef84a8c05eb84, type: 3}
+  level: 1
+  description: Esta un hacha de mierda
+  icon: {fileID: 21300000, guid: a8c101d9a405fde48893af4889090966, type: 3}
+  image: {fileID: 21300000, guid: f513c0a9fba48d04b83ba8fd2a8e602c, type: 3}
+  rarity: 0
+  effectType: 3

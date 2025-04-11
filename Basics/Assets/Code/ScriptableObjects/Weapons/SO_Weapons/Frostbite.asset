@@ -17,5 +17,11 @@ MonoBehaviour:
   range: 2.2
   weaponPrefab: {fileID: 0}
   level: 18
+  description: Antigua lanza de los antiguos custodios del norte, sus hojas cubiertas
+    de hielo eterno. Cada impacto congela la carne y el alma de aquellos que sufren
+    su toque. Al igual que el invierno, la muerte llega lentamente, pero nunca se
+    va.
+  icon: {fileID: 21300000, guid: eddac6f42ce39d84b82ac7a588df3fd3, type: 3}
+  image: {fileID: 21300000, guid: 67a18668329abf5479cdda4c9ad3d5bc, type: 3}
   rarity: 2
   effectType: 1

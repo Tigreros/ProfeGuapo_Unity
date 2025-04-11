@@ -17,5 +17,11 @@ MonoBehaviour:
   range: 12
   weaponPrefab: {fileID: 0}
   level: 12
+  description: "Esta daga, con empu\xF1adura negra como la noche m\xE1s oscura, est\xE1
+    impregnada de un veneno que no se ve, pero se siente. Los moribundos cuyas heridas
+    fueron infligidas por ella se desintegran poco a poco, dejando tras de s\xED
+    s\xF3lo un eco de su sufrimiento. Nunca olvidan el dulce beso de la muerte."
+  icon: {fileID: 21300000, guid: 6e3bc46d03975fc40aa1c92f39c80f40, type: 3}
+  image: {fileID: 21300000, guid: 07627371c85b43f42906271e409f9449, type: 3}
   rarity: 1
   effectType: 2

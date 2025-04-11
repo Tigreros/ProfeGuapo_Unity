@@ -12,6 +12,9 @@ public class WeaponData : ScriptableObject
     [TextAreaAttribute(2,6)]
     public string description;
 
+    public Sprite icon;
+    public Sprite image;
+
 
     //--------------------- Expansion WeaponData --------------------//
     public WeaponRarity rarity = WeaponRarity.Commom;

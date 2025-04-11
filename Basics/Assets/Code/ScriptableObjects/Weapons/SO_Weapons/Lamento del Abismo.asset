@@ -17,5 +17,11 @@ MonoBehaviour:
   range: 1.5
   weaponPrefab: {fileID: 0}
   level: 30
+  description: "Forjada en el coraz\xF3n del vac\xEDo, esta espada emite un susurro
+    sombr\xEDo cuando es desenvainada. Su filo no tiene igual, pero aquellos que
+    la empu\xF1an sienten una creciente desesperaci\xF3n, como si el abismo los llamara
+    con cada golpe. No es el acero lo que corta, sino el alma misma."
+  icon: {fileID: 21300000, guid: 428d9d27d37d76d42887a930ce9d11f3, type: 3}
+  image: {fileID: 21300000, guid: 0ebf20b6c0070b740a40927787e62188, type: 3}
   rarity: 3
   effectType: 3
