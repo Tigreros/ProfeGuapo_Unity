@@ -33,6 +33,10 @@ public class WeaponData : ScriptableObject
         clone.effectType = this.effectType;
         clone.weaponName = this.weaponName + $" + {clone.level}";
 
+
+        WeaponUIManager.instance_WeaponManager.RemoveWeaponUpgrade();
         return clone;
+
+
     }
 }

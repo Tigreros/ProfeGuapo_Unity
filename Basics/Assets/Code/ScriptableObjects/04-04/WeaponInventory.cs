@@ -55,6 +55,7 @@ public class WeaponInventory : MonoBehaviour
                 //Debug.Log($"Fusinamos dos {newWeapon.weaponName} de nivel {newWeapon.level}");
                 inventory.Remove(existing);
                 newWeapon = newWeapon.CloneAndUpgrade();
+                WeaponUIManager.instance_WeaponManager.GetCurrentWeaponData(newWeapon);
                 fusionOcurriendo = true;
             }
         }
