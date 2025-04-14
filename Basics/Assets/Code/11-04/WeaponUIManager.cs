@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
+using System;
 
 
 public class WeaponUIManager : MonoBehaviour
@@ -14,6 +15,8 @@ public class WeaponUIManager : MonoBehaviour
     public GameObject weaponSlotPrefab;
     public List<WeaponData> weapons = new List<WeaponData>();
 
+    public List<WeaponData> selectWeapons = new List<WeaponData>();
+
     public List<GameObject> slot = new List<GameObject>();
 
     public TextMeshProUGUI titleText;
@@ -22,6 +25,10 @@ public class WeaponUIManager : MonoBehaviour
 
     private WeaponData current;
     public int index;
+
+    public Button fusionButton;
+
+    public WeaponInventory inventory;
 
 
     private void Awake()
@@ -46,10 +53,17 @@ public class WeaponUIManager : MonoBehaviour
         weaponSlotPrefab = Resources.Load<GameObject>("WeaponSlotPrefab");
 
         gridParent = GameObject.Find("Inventory").transform;
+
+
+        fusionButton = GameObject.Find("Fusion").GetComponent<Button>();
+        fusionButton.onClick.AddListener(AttemptFusion);
+
+        inventory = GameObject.Find("Flick").GetComponent<WeaponInventory>();
     }
 
     public void GetCurrentWeaponData(WeaponData data)
     {
+        Debug.Log(data);
         weapons.Add(data);
         slot.Add(Instantiate(weaponSlotPrefab, gridParent));
         slot[slot.Count - 1].transform.GetChild(0).GetComponent<Image>().sprite = data.icon;
@@ -65,9 +79,60 @@ public class WeaponUIManager : MonoBehaviour
         contentText.text = $"Daño: {current.damage} \n" + $"Efecto: {current.effectType} \n" + $"Rareza: {current.rarity} \n" + $"Descripción: {current.description} \n";
     }
 
-    public void RemoveWeaponUpgrade()
+    public void RemoveWeaponUpgrade(WeaponData weaponRemove)
     {
-        weapons.RemoveAt(weapons.Count - 1);
-        Destroy(slot[slot.Count - 1]);
+        for (int i = 0; i < weapons.Count; i++)
+        {
+            if (weapons[i].weaponName == weaponRemove.weaponName && inventory.autoFusion || weapons[i].isSelected == weaponRemove.isSelected)
+            {
+                weapons.RemoveAt(i);
+                Destroy(slot[i]);
+                slot.RemoveAt(i);
+            }
+        }
+    }
+
+    public void SelectWeaponForFusion(WeaponData data)
+    {
+        //if (selectWeapons.Contains(data)) return;
+
+        if (selectWeapons.Count <= 1) 
+        {
+            selectWeapons.Add(data);
+            data.isSelected = true;
+        }
+
+        if (selectWeapons.Count >= 2)
+        {
+            ManagerLog.instance_Log.Log("YA TENEMOS DOS ARMAS SELECCIONADAS", "");
+        }
+
+
+        ManagerLog.instance_Log.Log($" Seleccionaste: {data.weaponName}", "");
+    }
+
+
+    private void AttemptFusion()
+    {
+        if(selectWeapons.Count != 2)
+        {
+            ManagerLog.instance_Log.Log("Selecciona exactamente dos armas para fusionar.", "");
+            return;
+        }
+
+        WeaponData a = selectWeapons[0];
+        WeaponData b = selectWeapons[1];
+
+        if(a.weaponName == b.weaponName)
+        {
+            WeaponData fused = a.CloneAndUpgrade();
+            fused.isSelected = false;
+            inventory.AddWeapon(fused);
+            ManagerLog.instance_Log.Log($"Fusión exitosa! Creaste: {fused.weaponName}", "fused");
+
+            RemoveWeaponUpgrade(a);
+        }
+
+        selectWeapons.Clear();
     }
 }

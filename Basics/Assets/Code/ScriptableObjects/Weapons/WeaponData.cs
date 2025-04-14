@@ -15,6 +15,8 @@ public class WeaponData : ScriptableObject
     public Sprite icon;
     public Sprite image;
 
+    public bool isSelected;
+
 
     //--------------------- Expansion WeaponData --------------------//
     public WeaponRarity rarity = WeaponRarity.Commom;
@@ -24,7 +26,8 @@ public class WeaponData : ScriptableObject
 
     public WeaponData CloneAndUpgrade()
     {
-        WeaponData clone = Instantiate(this); 
+        WeaponData clone = Instantiate(this);
+
         clone.level = this.level + 1;
         clone.damage += 5 * clone.level;
 
@@ -33,10 +36,6 @@ public class WeaponData : ScriptableObject
         clone.effectType = this.effectType;
         clone.weaponName = this.weaponName + $" + {clone.level}";
 
-
-        WeaponUIManager.instance_WeaponManager.RemoveWeaponUpgrade();
         return clone;
-
-
     }
 }

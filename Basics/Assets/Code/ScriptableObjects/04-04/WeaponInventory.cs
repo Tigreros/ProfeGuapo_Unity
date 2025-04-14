@@ -9,26 +9,11 @@ public class WeaponInventory : MonoBehaviour
 
     public int index = 0;
 
+    public bool autoFusion;
+
+
     private void Update()
     {
-        /*if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            EquipWeaponbyIndex(0);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            EquipWeaponbyIndex(1);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            EquipWeaponbyIndex(2);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            EquipWeaponbyIndex(2);
-        }*/
-
-
         if(Input.mouseScrollDelta.y != 0)
         {
             index = Mathf.RoundToInt(Input.mouseScrollDelta.y) + index;
@@ -42,39 +27,40 @@ public class WeaponInventory : MonoBehaviour
 
     public void AddWeapon(WeaponData newWeapon)
     {
-        bool fusionOcurriendo = true;
-
-        while (fusionOcurriendo)
+        if (autoFusion)
         {
-            fusionOcurriendo = false;
 
-            WeaponData existing = inventory.Find(w => w.weaponName == newWeapon.weaponName);
+            print(newWeapon);
 
-            if (existing != null)
+            bool fusionOcurriendo = true;
+
+            while (fusionOcurriendo)
             {
-                //Debug.Log($"Fusinamos dos {newWeapon.weaponName} de nivel {newWeapon.level}");
-                inventory.Remove(existing);
-                newWeapon = newWeapon.CloneAndUpgrade();
-                WeaponUIManager.instance_WeaponManager.GetCurrentWeaponData(newWeapon);
-                fusionOcurriendo = true;
+                fusionOcurriendo = false;
+
+                WeaponData existing = inventory.Find(w => w.weaponName == newWeapon.weaponName);
+
+                if (existing != null)
+                {
+                    newWeapon = newWeapon.CloneAndUpgrade();
+                    inventory.Remove(existing);
+                    WeaponUIManager.instance_WeaponManager.RemoveWeaponUpgrade(existing);
+                    fusionOcurriendo = true;
+                }
             }
         }
 
         inventory.Add(newWeapon);
+        WeaponUIManager.instance_WeaponManager.GetCurrentWeaponData(newWeapon);
         equippedWeapon = newWeapon;
-        //Debug.Log($" Arma final equipada: {newWeapon.weaponName} , nivel({newWeapon.level})");
     }
-
-
-
-
 
     public void EquipWeaponbyIndex(int index)
     {
         if (index >= 0 && index < inventory.Count)
         { 
             equippedWeapon = inventory[index];
-            Debug.Log($"Te equipaste {equippedWeapon.weaponName} con un daño de ( {equippedWeapon.damage} Pts )");
+            //Debug.Log($"Te equipaste {equippedWeapon.weaponName} con un daño de ( {equippedWeapon.damage} Pts )");
         }
     }
 

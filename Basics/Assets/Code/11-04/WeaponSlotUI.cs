@@ -8,9 +8,10 @@ public class WeaponSlotUI : MonoBehaviour
     public Image iconImage;
 
     public Button button;
+    public Button buttonSelect;
 
-    private WeaponData weaponData;
-    private WeaponUIManager uiManager;
+    public WeaponData weaponData;
+    public WeaponUIManager uiManager;
 
 
     private void Start()
@@ -20,6 +21,13 @@ public class WeaponSlotUI : MonoBehaviour
         {
             uiManager.WeaponsDetails(weaponData);
         });
+
+        buttonSelect = transform.GetChild(1).GetComponent<Button>();
+        buttonSelect.onClick.AddListener(() =>
+        {
+            uiManager.SelectWeaponForFusion(weaponData);
+
+        });
     }
 
     public void Setup(WeaponData data, WeaponUIManager manager)
@@ -27,15 +35,4 @@ public class WeaponSlotUI : MonoBehaviour
         weaponData = data;
         uiManager = manager;
     }
-
-    /*public void onClick()
-    {
-        //uiManager.ShowWeaponsDetails(weaponData);
-        Debug.Log("He pulsado el boton papa");  
-    }*/
-
-    //void OnClick()
-    //{
-    //    Debug.Log("Clicked!");
-    //}
 }

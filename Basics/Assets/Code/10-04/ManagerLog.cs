@@ -67,7 +67,13 @@ public class ManagerLog : MonoBehaviour
                 //Debug.Log("Normal");
                 break;
 
+            case "fused":
+                instance.GetComponent<TextMeshProUGUI>().color = new Color(0.77f, 0, 1);
+                //Debug.Log("Normal");
+                break;
+
             default:
+                instance.GetComponent<TextMeshProUGUI>().color = new Color(0, 0, 0);
                 break;
         }
 
