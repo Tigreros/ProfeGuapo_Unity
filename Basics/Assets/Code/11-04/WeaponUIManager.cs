@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
 using System;
+using static UnityEngine.UIElements.UxmlAttributeDescription;
 
 
 public class WeaponUIManager : MonoBehaviour
@@ -134,6 +135,10 @@ public class WeaponUIManager : MonoBehaviour
 
             RemoveWeaponUpgrade(a);
             RemoveWeaponUpgrade(b);
+        }
+        else
+        {
+            ManagerLog.instance_Log.Log($"NO SE PUEDEN fusionar cosas distintas: {a.weaponName} y {b.weaponName}", "");
         }
 
         selectWeapons.Clear();

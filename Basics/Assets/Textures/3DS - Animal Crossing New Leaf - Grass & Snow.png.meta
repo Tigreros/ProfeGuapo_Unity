@@ -1,0 +1,902 @@
+fileFormatVersion: 2
+guid: 3c6f6b794b6b65f49bef1c50d63e96b8
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 3DS - Animal Crossing New Leaf - Grass & Snow_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 272
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30e5be8227229e64cb934eb047ad8c07
+      internalID: -48315139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3DS - Animal Crossing New Leaf - Grass & Snow_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 272
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77db22053d0b3714c9b70fbebb4ccc79
+      internalID: 1473991471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3DS - Animal Crossing New Leaf - Grass & Snow_2
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 272
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ed2f36d6c6ba664880b39b0e58470fb
+      internalID: -998845852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3DS - Animal Crossing New Leaf - Grass & Snow_3
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 272
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8f75850bf461e24581e27d08ecd9b46
+      internalID: -585386674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3DS - Animal Crossing New Leaf - Grass & Snow_4
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 272
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1948d3459f4cf2e4498fd2a05ab5b4f9
+      internalID: -1134572059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3DS - Animal Crossing New Leaf - Grass & Snow_5
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 272
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 441302515c51ca14e896f7d178dd9d81
+      internalID: 482649424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3DS - Animal Crossing New Leaf - Grass & Snow_6
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 272
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee29a4fcef2fb70448486d6f9eb5bee2
+      internalID: -232663499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3DS - Animal Crossing New Leaf - Grass & Snow_7
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 272
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aedba15237147341a7157114797841e
+      internalID: 947343031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3DS - Animal Crossing New Leaf - Grass & Snow_8
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 272
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15d27c4f62bba5b44988cc5373f90910
+      internalID: -1938067240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3DS - Animal Crossing New Leaf - Grass & Snow_9
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 272
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37e1e6a6784685446a510e7f799229d9
+      internalID: -975193303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3DS - Animal Crossing New Leaf - Grass & Snow_10
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 204
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bbde2b8a38055f4c8fd45269a45940f
+      internalID: -1267908780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3DS - Animal Crossing New Leaf - Grass & Snow_11
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 204
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 389aa7674216e79408763e543bd794f8
+      internalID: 1998669768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3DS - Animal Crossing New Leaf - Grass & Snow_12
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 204
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e390002f1d984254cb42c991825a3dbe
+      internalID: -1516143645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3DS - Animal Crossing New Leaf - Grass & Snow_13
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 204
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a90a91c290750944b68728cc5d6882e
+      internalID: -1902626767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3DS - Animal Crossing New Leaf - Grass & Snow_14
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 204
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83dabca2a3b5567479d71b4c25b9deb3
+      internalID: -1936340517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3DS - Animal Crossing New Leaf - Grass & Snow_15
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 204
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0af7f172a5faf1e48a89d9624f18e8d1
+      internalID: -2127461850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3DS - Animal Crossing New Leaf - Grass & Snow_16
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 204
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27894ef57dc5188469ba99c14a743337
+      internalID: -1962922873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3DS - Animal Crossing New Leaf - Grass & Snow_17
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 204
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a49b2ea4530d72c46adb08c2dbdc5261
+      internalID: -81982732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3DS - Animal Crossing New Leaf - Grass & Snow_18
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 204
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6767fe3738e6c48489c4c50a2c0c0c95
+      internalID: 1743927055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3DS - Animal Crossing New Leaf - Grass & Snow_19
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 204
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a7801d7bfadc1649a4c2819b0bfc67f
+      internalID: 2025336813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3DS - Animal Crossing New Leaf - Grass & Snow_20
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 136
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42ceff7c383f5b841b56a2810efda5c8
+      internalID: -2081419918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3DS - Animal Crossing New Leaf - Grass & Snow_21
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 136
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 070132307744e43489cf0cf6be2c4170
+      internalID: 1638623052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3DS - Animal Crossing New Leaf - Grass & Snow_22
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 136
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08d98f690d4e8724bb3337a8e6fb7865
+      internalID: 931769921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3DS - Animal Crossing New Leaf - Grass & Snow_23
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 136
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77f5d7e7f9f91a3498ba64968f589a47
+      internalID: 2135017297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3DS - Animal Crossing New Leaf - Grass & Snow_24
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 136
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68f0e148ece71144ba000e5d8ec9fcac
+      internalID: -787691065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3DS - Animal Crossing New Leaf - Grass & Snow_25
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 136
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09e037746c59fa54bb9e63c7193e9334
+      internalID: -154917392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3DS - Animal Crossing New Leaf - Grass & Snow_26
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 136
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aafea7c37e9c474b9b110d36afcf96d
+      internalID: -235107305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3DS - Animal Crossing New Leaf - Grass & Snow_27
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 136
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a502900c81f950946b7f5d4b55494234
+      internalID: -1720855439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3DS - Animal Crossing New Leaf - Grass & Snow_28
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 136
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a588f6fcab7f2d448b297f8c5638cdf0
+      internalID: -1520667755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3DS - Animal Crossing New Leaf - Grass & Snow_29
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 136
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca1a4921227751149a718cade84109c8
+      internalID: -2021040659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3DS - Animal Crossing New Leaf - Grass & Snow_30
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 4
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b41167e0c5b93a2438a578ff72587094
+      internalID: 2034908739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3DS - Animal Crossing New Leaf - Grass & Snow_31
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 68
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45b5e72543570884b82ec679df8ae763
+      internalID: -767624574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3DS - Animal Crossing New Leaf - Grass & Snow_32
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 68
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c0a2fccb0cb8394787fd5f75fa161d9
+      internalID: -1424310405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 4f1bfadaaafe4ba42811493b2c6a52c0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      3DS - Animal Crossing New Leaf - Grass & Snow_0: -48315139
+      3DS - Animal Crossing New Leaf - Grass & Snow_1: 1473991471
+      3DS - Animal Crossing New Leaf - Grass & Snow_10: -1267908780
+      3DS - Animal Crossing New Leaf - Grass & Snow_11: 1998669768
+      3DS - Animal Crossing New Leaf - Grass & Snow_12: -1516143645
+      3DS - Animal Crossing New Leaf - Grass & Snow_13: -1902626767
+      3DS - Animal Crossing New Leaf - Grass & Snow_14: -1936340517
+      3DS - Animal Crossing New Leaf - Grass & Snow_15: -2127461850
+      3DS - Animal Crossing New Leaf - Grass & Snow_16: -1962922873
+      3DS - Animal Crossing New Leaf - Grass & Snow_17: -81982732
+      3DS - Animal Crossing New Leaf - Grass & Snow_18: 1743927055
+      3DS - Animal Crossing New Leaf - Grass & Snow_19: 2025336813
+      3DS - Animal Crossing New Leaf - Grass & Snow_2: -998845852
+      3DS - Animal Crossing New Leaf - Grass & Snow_20: -2081419918
+      3DS - Animal Crossing New Leaf - Grass & Snow_21: 1638623052
+      3DS - Animal Crossing New Leaf - Grass & Snow_22: 931769921
+      3DS - Animal Crossing New Leaf - Grass & Snow_23: 2135017297
+      3DS - Animal Crossing New Leaf - Grass & Snow_24: -787691065
+      3DS - Animal Crossing New Leaf - Grass & Snow_25: -154917392
+      3DS - Animal Crossing New Leaf - Grass & Snow_26: -235107305
+      3DS - Animal Crossing New Leaf - Grass & Snow_27: -1720855439
+      3DS - Animal Crossing New Leaf - Grass & Snow_28: -1520667755
+      3DS - Animal Crossing New Leaf - Grass & Snow_29: -2021040659
+      3DS - Animal Crossing New Leaf - Grass & Snow_3: -585386674
+      3DS - Animal Crossing New Leaf - Grass & Snow_30: 2034908739
+      3DS - Animal Crossing New Leaf - Grass & Snow_31: -767624574
+      3DS - Animal Crossing New Leaf - Grass & Snow_32: -1424310405
+      3DS - Animal Crossing New Leaf - Grass & Snow_4: -1134572059
+      3DS - Animal Crossing New Leaf - Grass & Snow_5: 482649424
+      3DS - Animal Crossing New Leaf - Grass & Snow_6: -232663499
+      3DS - Animal Crossing New Leaf - Grass & Snow_7: 947343031
+      3DS - Animal Crossing New Leaf - Grass & Snow_8: -1938067240
+      3DS - Animal Crossing New Leaf - Grass & Snow_9: -975193303
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

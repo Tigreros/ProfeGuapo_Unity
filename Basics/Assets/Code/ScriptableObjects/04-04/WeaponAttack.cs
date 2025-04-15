@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem.HID;
+using static UnityEditor.PlayerSettings;
 
 public class WeaponAttack : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class WeaponAttack : MonoBehaviour
         {
             Attack();
         }
+        //Debug.DrawRay(attackPoint.transform.position, attackPoint.transform.forward * 1.5f, Color.yellow, 2);
     }
 
     private void Attack()
@@ -32,6 +34,7 @@ public class WeaponAttack : MonoBehaviour
 
         if(Physics.Raycast(attackPoint.transform.position, attackPoint.transform.forward, out hit, weapon.range))
         {
+            //Debug.DrawRay(attackPoint.transform.position, attackPoint.transform.forward * weapon.range, Color.yellow, 2);
             IHitable target = hit.collider.GetComponent<IHitable>();
 
             if (target != null)
@@ -44,6 +47,10 @@ public class WeaponAttack : MonoBehaviour
 
                 ApplyEffectIfAny(hit.collider, weapon);
             }
+        }
+        else
+        {
+            print("No estas atacando nada bb");
         }
     }
 
