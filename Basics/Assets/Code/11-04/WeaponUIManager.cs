@@ -83,14 +83,16 @@ public class WeaponUIManager : MonoBehaviour
     {
         for (int i = 0; i < weapons.Count; i++)
         {
-            if (weapons[i].weaponName == weaponRemove.weaponName && inventory.autoFusion || weapons[i].isSelected == weaponRemove.isSelected)
+            if (weapons[i] == weaponRemove)
             {
                 weapons.RemoveAt(i);
                 Destroy(slot[i]);
                 slot.RemoveAt(i);
+                break;
             }
         }
     }
+
 
     public void SelectWeaponForFusion(WeaponData data)
     {
@@ -131,6 +133,7 @@ public class WeaponUIManager : MonoBehaviour
             ManagerLog.instance_Log.Log($"Fusión exitosa! Creaste: {fused.weaponName}", "fused");
 
             RemoveWeaponUpgrade(a);
+            RemoveWeaponUpgrade(b);
         }
 
         selectWeapons.Clear();
