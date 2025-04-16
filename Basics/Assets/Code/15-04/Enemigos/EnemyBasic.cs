@@ -35,7 +35,9 @@ public class EnemyBasic : MonoBehaviour, IHitable
     public EnemyHealthBar enemyHealthBar;
 
     public StatusEffectType inmunity;
+    public TypeEnemys typeEnemy;
 
+    private bool coolDownActive;
 
     void Start()
     {
@@ -97,6 +99,11 @@ public class EnemyBasic : MonoBehaviour, IHitable
         }
         else
         {
+            if (weapon.effectType == StatusEffectType.Freeze && !coolDownActive)
+            {
+                StartCoroutine(Stung(weapon)); coolDownActive = true;
+            }
+
             currentHealth -= damage;
             Debug.Log($"{gameObject.name} recibio {damage} de daño. Vida restante: {currentHealth}");
 
@@ -163,5 +170,29 @@ public class EnemyBasic : MonoBehaviour, IHitable
         }
     }
 
+    IEnumerator Stung(WeaponData weapon)
+    {
+        float stung = 0;
 
+        switch (typeEnemy)
+        {
+            case TypeEnemys.Common:
+                break;
+            case TypeEnemys.Rare:
+                stung = weapon.stungTime * 0.8f;
+                break;
+            case TypeEnemys.Boos:
+                stung = weapon.stungTime * 0.5f;
+                break;
+            case TypeEnemys.FinalBoss:
+                stung = weapon.stungTime * 0.2f;
+                break;
+        }
+
+        agent.speed = 0;
+        yield return new WaitForSeconds(stung);
+        agent.speed = 3.5f;
+        yield return new WaitForSeconds(weapon.stungTime * 1.5f);
+        coolDownActive = false;
+    }
 }

@@ -17,6 +17,8 @@ public class WeaponData : ScriptableObject
 
     public bool isSelected;
 
+    public float stungTime;
+
 
     //--------------------- Expansion WeaponData --------------------//
     public WeaponRarity rarity = WeaponRarity.Commom;
