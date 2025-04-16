@@ -1,7 +1,11 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.AI;
 
+[RequireComponent(typeof(NavMeshAgent))]
+[RequireComponent(typeof(CapsuleCollider))]
+[RequireComponent(typeof(EnemyHealthBar))]
 public class EnemyBasic : MonoBehaviour, IHitable
 {
 
@@ -24,11 +28,33 @@ public class EnemyBasic : MonoBehaviour, IHitable
     public float visionAngle;
     public float detectionRange;
 
+    public GameObject enemyCanvas;
+    private GameObject prefab;
+
+    public EnemyHealthBar enemyHealthBar;
+
 
     void Start()
     {
         currentHealth = maxHealth;
         agent = GetComponent<NavMeshAgent>();
+        agent.stoppingDistance = 2;
+
+        GetComponent<CapsuleCollider>().radius = agent.radius;
+        GetComponent<CapsuleCollider>().height = agent.height;
+        GetComponent<CapsuleCollider>().center = Vector3.up;
+
+        
+        prefab = Resources.Load("EnemyCanvas") as GameObject;
+
+        enemyCanvas = Instantiate(prefab, new Vector3(transform.position.x,transform.position.y + agent.height + 0.25f,transform.position.z), Quaternion.identity, this.transform);
+        enemyHealthBar = GetComponent<EnemyHealthBar>();
+
+        GetComponent<EnemyHealthBar>().canvas = enemyCanvas.GetComponent<Canvas>();
+        GetComponent<EnemyHealthBar>().healthSlider = enemyCanvas.transform.GetChild(0).GetComponent<Slider>();
+        enemyHealthBar.Setup(maxHealth);
+        enemyHealthBar.SetVisible(false);
+
 
         player = GameObject.FindWithTag("Player").transform;
 
@@ -49,6 +75,7 @@ public class EnemyBasic : MonoBehaviour, IHitable
                 agent.SetDestination(enemyTarget.position);
             }
         }
+
         if (enemyVision)
         {
             Vision();
@@ -59,6 +86,8 @@ public class EnemyBasic : MonoBehaviour, IHitable
     {
         currentHealth -= damage;
         Debug.Log($"{gameObject.name} recibio {damage} de daño. Vida restante: {currentHealth}");
+
+        enemyHealthBar.UpdateHealth(currentHealth);
 
         StartCoroutine(VisualTakeHit());
 
@@ -84,6 +113,11 @@ public class EnemyBasic : MonoBehaviour, IHitable
                     if (hit.collider.CompareTag("Player"))
                     {
                         enemyTarget = player;
+                        enemyHealthBar.SetVisible(true);
+                    }
+                    else
+                    {
+                        print($"Esta colisionando contra otra cosa {hit.collider.name}");
                     }
                 }
             }
@@ -94,13 +128,16 @@ public class EnemyBasic : MonoBehaviour, IHitable
     {
         ManagerLog.instance_Log.Log($"{gameObject.name} ha sido derrotado.", "");
         isDied = true;
+        enemyHealthBar.SetVisible(false);
         Destroy(gameObject,2);
     }
 
     IEnumerator VisualTakeHit()
     {
         material.color = Color.red;
+
         yield return new WaitForSeconds(0.2f);
+
         if (isDied)
         {
             material.color = Color.black;
