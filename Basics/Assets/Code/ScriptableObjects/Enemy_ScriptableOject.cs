@@ -20,7 +20,7 @@ public class Enemy_ScriptableOject : MonoBehaviour, IHitable
 
     }
 
-    public void TakeHit(float damage)
+    public void TakeHit(float damage, WeaponData weapon)
     {
         currentHealth -= damage;
         Debug.Log(currentHealth);

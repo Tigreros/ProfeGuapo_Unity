@@ -867,6 +867,7 @@ MonoBehaviour:
   agent: {fileID: 0}
   enemyTarget: {fileID: 0}
   player: {fileID: 0}
+  camara: {fileID: 0}
   material: {fileID: 0}
   isDied: 0
   enemyVision: 1
@@ -876,6 +877,7 @@ MonoBehaviour:
   detectionRange: 15
   enemyCanvas: {fileID: 0}
   enemyHealthBar: {fileID: 0}
+  inmunity: 3
 --- !u!136 &314180612
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -915,6 +917,7 @@ MonoBehaviour:
   canvas: {fileID: 0}
   maxHealthLocal: 0
   image: {fileID: 0}
+  playerAssing: {fileID: 0}
 --- !u!1 &448800560
 GameObject:
   m_ObjectHideFlags: 0
@@ -2988,6 +2991,7 @@ MonoBehaviour:
   agent: {fileID: 0}
   enemyTarget: {fileID: 0}
   player: {fileID: 0}
+  camara: {fileID: 0}
   material: {fileID: 0}
   isDied: 0
   enemyVision: 1
@@ -2997,6 +3001,7 @@ MonoBehaviour:
   detectionRange: 15
   enemyCanvas: {fileID: 0}
   enemyHealthBar: {fileID: 0}
+  inmunity: 0
 --- !u!114 &1887309992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3013,6 +3018,7 @@ MonoBehaviour:
   canvas: {fileID: 0}
   maxHealthLocal: 0
   image: {fileID: 0}
+  playerAssing: {fileID: 0}
 --- !u!136 &1887309993
 CapsuleCollider:
   m_ObjectHideFlags: 0

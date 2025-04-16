@@ -38,7 +38,7 @@ public class AtaqueBaridoAngulo : MonoBehaviour
                 IHitable target = col.GetComponent<IHitable>();
                 if (target != null)
                 {
-                    target.TakeHit(1);
+                    //target.TakeHit(1);
                 }
             }
         }

@@ -10,6 +10,16 @@ public class EnemyHealthBar : MonoBehaviour
 
     public Image image;
 
+    public Transform playerAssing;
+
+    public void Update()
+    {
+        if(playerAssing != null)
+        {
+            canvas.transform.LookAt(playerAssing);
+        }
+    }
+
     public void Setup(float maxHealth)
     {
         healthSlider.maxValue = maxHealth;
@@ -28,5 +38,10 @@ public class EnemyHealthBar : MonoBehaviour
     public void SetVisible(bool visible)
     {
         canvas.enabled = visible;
+    }
+
+    public void FollowCamera(Transform player)
+    {
+        playerAssing = player;
     }
 }

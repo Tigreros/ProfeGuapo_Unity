@@ -1,5 +1,4 @@
 public interface IHitable
 {
-    void TakeHit(float damage);
-
+    void TakeHit(float damage, WeaponData weapon);
 }

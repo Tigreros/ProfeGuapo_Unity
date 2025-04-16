@@ -69,7 +69,7 @@ public class RaycastAttack : MonoBehaviour
 
                 if (target != null)
                 {
-                    target.TakeHit(1);
+                    //target.TakeHit(1);
                 }
                 else
                 {

@@ -16,6 +16,7 @@ public class EnemyBasic : MonoBehaviour, IHitable
     public Transform enemyTarget;
 
     public Transform player;
+    public Camera camara;
 
     public Material material;
 
@@ -33,6 +34,8 @@ public class EnemyBasic : MonoBehaviour, IHitable
 
     public EnemyHealthBar enemyHealthBar;
 
+    public StatusEffectType inmunity;
+
 
     void Start()
     {
@@ -44,7 +47,9 @@ public class EnemyBasic : MonoBehaviour, IHitable
         GetComponent<CapsuleCollider>().height = agent.height;
         GetComponent<CapsuleCollider>().center = Vector3.up;
 
-        
+
+
+
         prefab = Resources.Load("EnemyCanvas") as GameObject;
 
         enemyCanvas = Instantiate(prefab, new Vector3(transform.position.x,transform.position.y + agent.height + 0.25f,transform.position.z), Quaternion.identity, this.transform);
@@ -57,6 +62,7 @@ public class EnemyBasic : MonoBehaviour, IHitable
 
 
         player = GameObject.FindWithTag("Player").transform;
+        camara = player.GetComponentInChildren<Camera>();
 
         if (!enemyVision)
         {
@@ -82,18 +88,26 @@ public class EnemyBasic : MonoBehaviour, IHitable
         }
     }
 
-    void IHitable.TakeHit(float damage)
+    void IHitable.TakeHit(float damage, WeaponData weapon)
     {
-        currentHealth -= damage;
-        Debug.Log($"{gameObject.name} recibio {damage} de daño. Vida restante: {currentHealth}");
-
-        enemyHealthBar.UpdateHealth(currentHealth);
-
-        StartCoroutine(VisualTakeHit());
-
-        if(currentHealth <= 0) 
+        if (weapon.effectType == inmunity)
         {
-            Die();
+            damage = 0;
+            print("El enemigo es inmune a esta arma");
+        }
+        else
+        {
+            currentHealth -= damage;
+            Debug.Log($"{gameObject.name} recibio {damage} de daño. Vida restante: {currentHealth}");
+
+            enemyHealthBar.UpdateHealth(currentHealth);
+
+            StartCoroutine(VisualTakeHit());
+
+            if (currentHealth <= 0)
+            {
+                Die();
+            }
         }
     }
 
@@ -114,6 +128,7 @@ public class EnemyBasic : MonoBehaviour, IHitable
                     {
                         enemyTarget = player;
                         enemyHealthBar.SetVisible(true);
+                        enemyHealthBar.FollowCamera(camara.transform);
                     }
                     else
                     {
@@ -147,4 +162,6 @@ public class EnemyBasic : MonoBehaviour, IHitable
             material.color = Color.white;
         }
     }
+
+
 }

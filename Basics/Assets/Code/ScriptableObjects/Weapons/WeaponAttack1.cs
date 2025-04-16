@@ -27,7 +27,7 @@ public class WeaponAttack1 : MonoBehaviour
             IHitable target = hit.collider.GetComponent<IHitable>();
             if (target != null)
             {
-                target.TakeHit(weaponData.damage);
+                //target.TakeHit(weaponData.damage);
             }
         }
         else

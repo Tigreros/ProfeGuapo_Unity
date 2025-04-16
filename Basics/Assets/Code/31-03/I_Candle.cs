@@ -16,7 +16,7 @@ public class I_Candle : MonoBehaviour, IHitable, IHealable, IStatusEffectReceive
         }
     }
 
-    public void TakeHit(float damage)
+    public void TakeHit(float damage, WeaponData weapon)
     {
         //dropObject = new WeaponData[3];
 

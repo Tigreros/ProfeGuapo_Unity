@@ -42,7 +42,7 @@ public class WeaponAttack : MonoBehaviour
                 float multiplier = GetDamageMultiplier(weapon.rarity);
                 float finalDamage = weapon.damage * multiplier;
 
-                target.TakeHit(finalDamage);
+                target.TakeHit(finalDamage, weapon);
                 Debug.Log($"Hemos atacado con {weapon.weaponName}({weapon.rarity}), y hemos causado {finalDamage} de daño.");
 
                 ApplyEffectIfAny(hit.collider, weapon);

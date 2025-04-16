@@ -370,7 +370,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3215313081653922712}
   m_FillRect: {fileID: 8811879542854310549}
   m_HandleRect: {fileID: 8356477272578792553}
-  m_Direction: 0
+  m_Direction: 1
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
