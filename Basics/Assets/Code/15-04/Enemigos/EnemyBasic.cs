@@ -39,6 +39,35 @@ public class EnemyBasic : MonoBehaviour, IHitable
 
     private bool coolDownActive;
 
+
+
+    private void OnEnable()
+    {
+        GameStateManager.OnGameStateChanged += HandleGameState;
+    }
+
+    private void OnDisable()
+    {
+        GameStateManager.OnGameStateChanged -= HandleGameState;
+    }
+    void HandleGameState(GameState state)
+    {
+        switch (state)
+        {
+            case GameState.Combate:
+                agent.isStopped = true;
+                break;
+
+            case GameState.Pausa:
+                agent.isStopped = false;
+                break;
+
+            case GameState.Recompensa:
+                agent.isStopped = false;
+                break;
+        }
+    }
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -195,4 +224,7 @@ public class EnemyBasic : MonoBehaviour, IHitable
         yield return new WaitForSeconds(weapon.stungTime * 1.5f);
         coolDownActive = false;
     }
+
+
+
 }

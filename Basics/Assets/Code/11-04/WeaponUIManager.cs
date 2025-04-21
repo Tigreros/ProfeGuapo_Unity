@@ -32,6 +32,43 @@ public class WeaponUIManager : MonoBehaviour
     public WeaponInventory inventory;
 
 
+
+
+
+    /*private void OnEnable()
+    {
+        GameStateManager.OnGameStateChanged += HandleGameState;
+    }
+
+    private void OnDisable()
+    {
+        GameStateManager.OnGameStateChanged -= HandleGameState;
+    }
+    void HandleGameState(GameState state)
+    {
+        switch (state)
+        {
+            case GameState.Combate:
+                rotateSpeed = 0;
+                break;
+
+            case GameState.Pausa:
+                speed = 0;
+                break;
+
+            case GameState.Recompensa:
+                speed = 0;
+                break;
+        }
+    }*/
+
+
+
+
+
+
+
+
     private void Awake()
     {
         if (instance_WeaponManager != null && instance_WeaponManager != this)
@@ -109,7 +146,6 @@ public class WeaponUIManager : MonoBehaviour
         {
             ManagerLog.instance_Log.Log("YA TENEMOS DOS ARMAS SELECCIONADAS", "");
         }
-
 
         ManagerLog.instance_Log.Log($" Seleccionaste: {data.weaponName}", "");
     }
