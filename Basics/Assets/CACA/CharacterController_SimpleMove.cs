@@ -30,6 +30,10 @@ public class CharacterController_SimpleMove : MonoBehaviour
                 speed = 0;
                 break;
 
+            case GameState.EnJuego:
+                speed = 3.0f;
+                break;
+
             case GameState.Recompensa:
                 speed = 0;
                 break;

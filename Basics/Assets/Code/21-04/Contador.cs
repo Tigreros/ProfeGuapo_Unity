@@ -1,15 +1,20 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class PauseMenu : MonoBehaviour
+public class Contador : MonoBehaviour
 {
-    //public GameObject childPanel;
-    public GameObject prefab;
+
+    public float count;
+
+
+
+
 
 
     private void OnEnable()
     {
-        //GameStateManager.OnGameStateChanged += HandleGameState;
+        GameStateManager.OnGameStateChanged += HandleGameState;
     }
 
     private void OnDisable()
@@ -18,25 +23,19 @@ public class PauseMenu : MonoBehaviour
     }
     void HandleGameState(GameState state)
     {
-        //print("jnhgclyfluyfck,ckgckgcjdjxsjfxsjmfdxjm");
-
-
-
         switch (state)
         {
             case GameState.Combate:
-
+                StartCoroutine("CountDecrease");
                 break;
 
             case GameState.EnJuego:
-                if (prefab != null) return;
+
                 break;
 
             case GameState.Pausa:
-                if (prefab != null) { prefab.SetActive(true); return; }
-                
-                prefab = Instantiate(Resources.Load("PauseMenu") as GameObject, this.transform);
-                
+
+
                 break;
 
             case GameState.Recompensa:
@@ -45,22 +44,31 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    private void Awake()
-    {
-        GameStateManager.OnGameStateChanged += HandleGameState;
 
-    }
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+
+    IEnumerator CountDecrease()
+    {
+        yield return new WaitForSeconds(1);
+        count--;
+        if (count <= 0)
+        {
+            StopCoroutine("CountDecrease");
+            GameStateManager.instance_GameStateManager.ChangeState(GameState.EnJuego);
+            yield return null;
+        }
+        StartCoroutine("CountDecrease");
     }
 }

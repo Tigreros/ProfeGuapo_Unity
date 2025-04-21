@@ -186,7 +186,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 1.67
 --- !u!222 &25327439
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f21e45b0de5d0f439b4562253113f33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  childPanel: {fileID: 0}
+  prefab: {fileID: 0}
 --- !u!1 &48789571
 GameObject:
   m_ObjectHideFlags: 0
@@ -849,6 +849,7 @@ GameObject:
   m_Component:
   - component: {fileID: 266984132}
   - component: {fileID: 266984133}
+  - component: {fileID: 266984134}
   m_Layer: 0
   m_Name: GamStateManager
   m_TagString: Untagged
@@ -884,6 +885,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
+--- !u!114 &266984134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266984131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff29212eac57d9c43a40fcd84413291f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 5
 --- !u!1 &362636484
 GameObject:
   m_ObjectHideFlags: 0
@@ -1006,7 +1020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: []
-  countMax: 10
+  countMax: 1
 --- !u!1 &448800560
 GameObject:
   m_ObjectHideFlags: 0

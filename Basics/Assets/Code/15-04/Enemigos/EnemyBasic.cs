@@ -39,7 +39,7 @@ public class EnemyBasic : MonoBehaviour, IHitable
 
     private bool coolDownActive;
 
-
+    public bool controlador;
 
     private void OnEnable()
     {
@@ -78,7 +78,7 @@ public class EnemyBasic : MonoBehaviour, IHitable
         GetComponent<CapsuleCollider>().height = agent.height;
         GetComponent<CapsuleCollider>().center = Vector3.up;
 
-
+        controlador = false;
 
 
         prefab = Resources.Load("EnemyCanvas") as GameObject;
@@ -117,6 +117,15 @@ public class EnemyBasic : MonoBehaviour, IHitable
         {
             Vision();
         }
+
+        if (Vector3.Distance(transform.position, enemyTarget.position) < 2 && controlador == false){
+            GameStateManager.instance_GameStateManager.ChangeState(GameState.Combate);
+            controlador = true;
+        }
+
+
+
+
     }
 
     void IHitable.TakeHit(float damage, WeaponData weapon)
@@ -225,6 +234,10 @@ public class EnemyBasic : MonoBehaviour, IHitable
         coolDownActive = false;
     }
 
+
+
+
+   
 
 
 }
