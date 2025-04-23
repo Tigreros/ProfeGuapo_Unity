@@ -120,12 +120,18 @@ public class EnemyBasic : MonoBehaviour, IHitable
 
         if (Vector3.Distance(transform.position, enemyTarget.position) < 2 && controlador == false){
             GameStateManager.instance_GameStateManager.ChangeState(GameState.Combate);
+            EventBus.Publish("OnStartCombat");
             controlador = true;
         }
+    }
 
-
-
-
+    void Die()
+    {
+        ManagerLog.instance_Log.Log($"{gameObject.name} ha sido derrotado.", "");
+        isDied = true;
+        enemyHealthBar.SetVisible(false);
+        EventBus.Publish("OnEndCombat");
+        Destroy(gameObject, 2);
     }
 
     void IHitable.TakeHit(float damage, WeaponData weapon)
@@ -184,13 +190,7 @@ public class EnemyBasic : MonoBehaviour, IHitable
         }
     }
 
-    void Die()
-    {
-        ManagerLog.instance_Log.Log($"{gameObject.name} ha sido derrotado.", "");
-        isDied = true;
-        enemyHealthBar.SetVisible(false);
-        Destroy(gameObject,2);
-    }
+
 
     IEnumerator VisualTakeHit()
     {

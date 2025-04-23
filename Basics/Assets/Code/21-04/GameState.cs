@@ -1,8 +1,8 @@
 public enum GameState
 {
-    Inicio, 
-    Combate, 
+    Inicio,
+    Combate,
     EnJuego,
-    Recompensa, 
+    Recompensa,
     Pausa
 }

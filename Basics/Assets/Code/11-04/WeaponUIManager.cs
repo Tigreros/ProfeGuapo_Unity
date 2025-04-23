@@ -2,8 +2,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
-using System;
-using static UnityEngine.UIElements.UxmlAttributeDescription;
 
 
 public class WeaponUIManager : MonoBehaviour
@@ -61,12 +59,6 @@ public class WeaponUIManager : MonoBehaviour
                 break;
         }
     }*/
-
-
-
-
-
-
 
 
     private void Awake()
