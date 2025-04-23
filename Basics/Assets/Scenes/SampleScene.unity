@@ -154,7 +154,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 1001}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &25327438
@@ -369,7 +369,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 294.66107, y: 40.75}
+  m_AnchoredPosition: {x: 366, y: 1030}
   m_SizeDelta: {x: 520, y: -318.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &66999201
@@ -731,6 +731,88 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &211731641
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 211731642}
+  - component: {fileID: 211731644}
+  - component: {fileID: 211731643}
+  m_Layer: 0
+  m_Name: ManagerGPT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &211731642
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211731641}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 383.90295, y: 214.56555, z: -2.479689}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &211731643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211731641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5edab0215e018641b0593d3f7822575, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TMP_respuestaGPT: {fileID: 1847531869}
+--- !u!114 &211731644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211731641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee9c4c7e8266cd64b999e7b948f3fe75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pregunta: Que tal? explicane el sentido del las picas en el poker
+  respuesta: \u00a1Hola! Claro, te explico:\n\nEn el **p\u00f3ker**, las **picas**
+    (\u2660) son uno de los cuatro **palos** (o \"palos\" en la baraja francesa),
+    junto con **corazones** (\u2665), **diamantes** (\u2666) y **tr\u00e9boles**
+    (\u2663).\n\n### \u00bfTienen un sentido especial las picas?\n\n**No hay un \"sentido\"
+    especial en t\u00e9rminos de valor o reglas b\u00e1sicas del p\u00f3ker**. Los
+    cuatro palos tienen el mismo valor; en la mayor\u00eda de las variantes de p\u00f3ker,
+    el palo NO determina qui\u00e9n gana entre manos del mismo tipo. Por ejemplo,
+    un color de corazones vale lo mismo que un color de picas en Texas Hold'em o
+    en Omaha.\n\n### Excepciones y usos de los palos (incluyendo picas)\n- **Desempates:**
+    En algunos juegos no est\u00e1ndar o en reglas de casa, los desempates entre
+    cartas del mismo valor se pueden romper usando el orden de los palos. En esos
+    casos, las picas suelen ser consideradas el palo m\u00e1s alto, seguidas por
+    corazones, diamantes y tr\u00e9boles. *Por ejemplo, si dos jugadores tienen un
+    As y hay que decidir qui\u00e9n empieza, la pica gana.*\n- **Juegos espec\u00edficos:**
+    En ciertos juegos de cartas distintos al p\u00f3ker, como el bridge, las picas
+    son el palo m\u00e1s alto.\n\n### S\u00edmbolo y significado hist\u00f3rico\n-
+    **Las picas** hist\u00f3ricamente representan lanzas o espadas (de hecho, en
+    la baraja espa\u00f1ola es la \"espada\").\n- En la iconograf\u00eda cl\u00e1sica,
+    la pica se ve como el palo de la guerra o la fuerza.\n\n### Conclusi\u00f3n\nEn
+    p\u00f3ker, las picas son **simples palos**, no tienen un valor especial frente
+    a los otros. Todo depende de las combinaciones de cartas, no del palo individualmente.\n\n\u00bfTe
+    interesa saber sobre la historia del s\u00edmbolo o sobre c\u00f3mo funcionan
+    los palos en distintas variantes del p\u00f3ker?
 --- !u!1 &219597002
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,7 +932,6 @@ GameObject:
   - component: {fileID: 266984132}
   - component: {fileID: 266984133}
   - component: {fileID: 266984134}
-  - component: {fileID: 266984135}
   m_Layer: 0
   m_Name: GamStateManager
   m_TagString: Untagged
@@ -899,19 +980,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   count: 5
---- !u!114 &266984135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 266984131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee9c4c7e8266cd64b999e7b948f3fe75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pregunta: "dime cuantos olescente de 14 a\xF1os con problemas de calculo y lectura"
 --- !u!1 &362636484
 GameObject:
   m_ObjectHideFlags: 0
@@ -1388,7 +1456,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4371047770335078035, guid: 17c4e6a8b5bd54d44878515e723aaf67, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -54.03
+      value: -68.81
       objectReference: {fileID: 0}
     - target: {fileID: 4371047770335078035, guid: 17c4e6a8b5bd54d44878515e723aaf67, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2446,6 +2514,7 @@ RectTransform:
   - {fileID: 200896942}
   - {fileID: 25327437}
   - {fileID: 929993155}
+  - {fileID: 1847531868}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3314,6 +3383,142 @@ MonoBehaviour:
   speedX: 0
   speedY: 0
   isHorizontal: 0
+--- !u!1 &1847531867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1847531868}
+  - component: {fileID: 1847531870}
+  - component: {fileID: 1847531869}
+  m_Layer: 5
+  m_Name: ContainerAnswer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1847531868
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847531867}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1184096635}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 316, y: -314.25}
+  m_SizeDelta: {x: 383.4058, y: 169.5096}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1847531869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847531867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: New Text
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 12
+  m_fontSizeBase: 12
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1847531870
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847531867}
+  m_CullTransparentMesh: 1
 --- !u!1 &1947543152
 GameObject:
   m_ObjectHideFlags: 0
@@ -3588,7 +3793,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4696031874003003843, guid: 849424de7631f3948a031c865c259765, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -54.2
+      value: -68.979996
       objectReference: {fileID: 0}
     - target: {fileID: 4696031874003003843, guid: 849424de7631f3948a031c865c259765, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3650,3 +3855,4 @@ SceneRoots:
   - {fileID: 583129408}
   - {fileID: 362636488}
   - {fileID: 266984132}
+  - {fileID: 211731642}

@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: goblin kamikaze
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c114702441181ad45a2a9c0ae50687a5, type: 3}
+      propertyPath: m_TagString
+      value: Objetivos
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5866666021909216657, guid: c114702441181ad45a2a9c0ae50687a5, type: 3}
     m_RemovedGameObjects: []
@@ -166,3 +170,4 @@ MonoBehaviour:
   enemyHealthBar: {fileID: 0}
   inmunity: 0
   typeEnemy: 0
+  controlador: 0

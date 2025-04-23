@@ -44,12 +44,36 @@ public class EnemyBasic : MonoBehaviour, IHitable
     private void OnEnable()
     {
         GameStateManager.OnGameStateChanged += HandleGameState;
+        EventBus.HitSusbcribe("HitObject", EventBusTakeHit);
     }
 
     private void OnDisable()
     {
         GameStateManager.OnGameStateChanged -= HandleGameState;
+        EventBus.HitUnsubscribe("HitObject", EventBusTakeHit);
     }
+
+    void EventBusTakeHit(object target, float damage)
+    {
+        if(target is GameObject go)
+        {
+            IHitable h = go.GetComponent<IHitable>();
+            if(h != null)
+            {
+                h.TakeHit(damage, null);
+            }
+            else
+            {
+                Debug.Log("DSDAFDFDSAFASFDA12321343214321432154532634576537658759875986FDAf");
+            }
+        }
+    }
+
+
+
+
+
+
     void HandleGameState(GameState state)
     {
         switch (state)
@@ -67,6 +91,8 @@ public class EnemyBasic : MonoBehaviour, IHitable
                 break;
         }
     }
+
+
 
     void Start()
     {
@@ -110,6 +136,13 @@ public class EnemyBasic : MonoBehaviour, IHitable
             if (enemyTarget != null)
             {
                 agent.SetDestination(enemyTarget.position);
+
+                if (Vector3.Distance(transform.position, enemyTarget.position) < 2 && controlador == false)
+                {
+                    GameStateManager.instance_GameStateManager.ChangeState(GameState.Combate);
+                    EventBus.Publish("OnStartCombat");
+                    controlador = true;
+                }
             }
         }
 
@@ -118,11 +151,7 @@ public class EnemyBasic : MonoBehaviour, IHitable
             Vision();
         }
 
-        if (Vector3.Distance(transform.position, enemyTarget.position) < 2 && controlador == false){
-            GameStateManager.instance_GameStateManager.ChangeState(GameState.Combate);
-            EventBus.Publish("OnStartCombat");
-            controlador = true;
-        }
+
     }
 
     void Die()
@@ -136,29 +165,30 @@ public class EnemyBasic : MonoBehaviour, IHitable
 
     void IHitable.TakeHit(float damage, WeaponData weapon)
     {
-        if (weapon.effectType == inmunity)
-        {
-            damage = 0;
-            print("El enemigo es inmune a esta arma");
-        }
-        else
+        if(weapon != null)
         {
             if (weapon.effectType == StatusEffectType.Freeze && !coolDownActive)
             {
                 StartCoroutine(Stung(weapon)); coolDownActive = true;
             }
 
-            currentHealth -= damage;
-            Debug.Log($"{gameObject.name} recibio {damage} de daño. Vida restante: {currentHealth}");
-
-            enemyHealthBar.UpdateHealth(currentHealth);
-
-            StartCoroutine(VisualTakeHit());
-
-            if (currentHealth <= 0)
+            if (weapon.effectType == inmunity)
             {
-                Die();
+                damage = 0;
+                print("El enemigo es inmune a esta arma");
             }
+        }
+
+        currentHealth -= damage;
+        Debug.Log($"{gameObject.name} recibio {damage} de daño. Vida restante: {currentHealth}");
+
+        enemyHealthBar.UpdateHealth(currentHealth);
+
+        StartCoroutine(VisualTakeHit());
+
+        if (currentHealth <= 0)
+        {
+            Die();
         }
     }
 
