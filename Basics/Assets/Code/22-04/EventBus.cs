@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public static class EventBus
 {
     private static Dictionary<string, Action> events = new Dictionary<string, Action>();
-
+    private int ccaca;
     public static void Subscribe(string eventName, Action callback)
     {
         if (!events.ContainsKey(eventName))
