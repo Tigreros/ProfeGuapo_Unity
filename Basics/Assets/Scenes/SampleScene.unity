@@ -485,6 +485,159 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 105280420}
   m_CullTransparentMesh: 1
+--- !u!1 &113720512
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 113720516}
+  - component: {fileID: 113720515}
+  - component: {fileID: 113720514}
+  - component: {fileID: 113720513}
+  - component: {fileID: 113720518}
+  - component: {fileID: 113720517}
+  m_Layer: 0
+  m_Name: Cube (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &113720513
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113720512}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &113720514
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113720512}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &113720515
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113720512}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &113720516
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113720512}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.65, y: 2.39, z: -60.79}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &113720517
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113720512}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &113720518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113720512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8bdd865ff8aeda40bb43f9f0c25d236, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thrust: 8
+  rb: {fileID: 113720517}
+  damage: 300
+  radius: 50
 --- !u!1 &179511099
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,30 +942,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee9c4c7e8266cd64b999e7b948f3fe75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pregunta: Que tal? explicane el sentido del las picas en el poker
-  respuesta: \u00a1Hola! Claro, te explico:\n\nEn el **p\u00f3ker**, las **picas**
-    (\u2660) son uno de los cuatro **palos** (o \"palos\" en la baraja francesa),
-    junto con **corazones** (\u2665), **diamantes** (\u2666) y **tr\u00e9boles**
-    (\u2663).\n\n### \u00bfTienen un sentido especial las picas?\n\n**No hay un \"sentido\"
-    especial en t\u00e9rminos de valor o reglas b\u00e1sicas del p\u00f3ker**. Los
-    cuatro palos tienen el mismo valor; en la mayor\u00eda de las variantes de p\u00f3ker,
-    el palo NO determina qui\u00e9n gana entre manos del mismo tipo. Por ejemplo,
-    un color de corazones vale lo mismo que un color de picas en Texas Hold'em o
-    en Omaha.\n\n### Excepciones y usos de los palos (incluyendo picas)\n- **Desempates:**
-    En algunos juegos no est\u00e1ndar o en reglas de casa, los desempates entre
-    cartas del mismo valor se pueden romper usando el orden de los palos. En esos
-    casos, las picas suelen ser consideradas el palo m\u00e1s alto, seguidas por
-    corazones, diamantes y tr\u00e9boles. *Por ejemplo, si dos jugadores tienen un
-    As y hay que decidir qui\u00e9n empieza, la pica gana.*\n- **Juegos espec\u00edficos:**
-    En ciertos juegos de cartas distintos al p\u00f3ker, como el bridge, las picas
-    son el palo m\u00e1s alto.\n\n### S\u00edmbolo y significado hist\u00f3rico\n-
-    **Las picas** hist\u00f3ricamente representan lanzas o espadas (de hecho, en
-    la baraja espa\u00f1ola es la \"espada\").\n- En la iconograf\u00eda cl\u00e1sica,
-    la pica se ve como el palo de la guerra o la fuerza.\n\n### Conclusi\u00f3n\nEn
-    p\u00f3ker, las picas son **simples palos**, no tienen un valor especial frente
-    a los otros. Todo depende de las combinaciones de cartas, no del palo individualmente.\n\n\u00bfTe
-    interesa saber sobre la historia del s\u00edmbolo o sobre c\u00f3mo funcionan
-    los palos en distintas variantes del p\u00f3ker?
 --- !u!1 &219597002
 GameObject:
   m_ObjectHideFlags: 0
@@ -1102,7 +1231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: []
-  countMax: 1
+  countMax: 3
 --- !u!1 &448800560
 GameObject:
   m_ObjectHideFlags: 0
@@ -1448,15 +1577,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4371047770335078035, guid: 17c4e6a8b5bd54d44878515e723aaf67, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 27.1
+      value: 8.41
       objectReference: {fileID: 0}
     - target: {fileID: 4371047770335078035, guid: 17c4e6a8b5bd54d44878515e723aaf67, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.4
+      value: 0.40300003
       objectReference: {fileID: 0}
     - target: {fileID: 4371047770335078035, guid: 17c4e6a8b5bd54d44878515e723aaf67, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -68.81
+      value: -65.989006
       objectReference: {fileID: 0}
     - target: {fileID: 4371047770335078035, guid: 17c4e6a8b5bd54d44878515e723aaf67, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3274,7 +3403,7 @@ GameObject:
   - component: {fileID: 1830602574}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3785,15 +3914,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4696031874003003843, guid: 849424de7631f3948a031c865c259765, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 26.27
+      value: 8.42
       objectReference: {fileID: 0}
     - target: {fileID: 4696031874003003843, guid: 849424de7631f3948a031c865c259765, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.65
+      value: 0.653
       objectReference: {fileID: 0}
     - target: {fileID: 4696031874003003843, guid: 849424de7631f3948a031c865c259765, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -68.979996
+      value: -66.109
       objectReference: {fileID: 0}
     - target: {fileID: 4696031874003003843, guid: 849424de7631f3948a031c865c259765, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3856,3 +3985,4 @@ SceneRoots:
   - {fileID: 362636488}
   - {fileID: 266984132}
   - {fileID: 211731642}
+  - {fileID: 113720516}

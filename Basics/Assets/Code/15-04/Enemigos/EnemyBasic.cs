@@ -163,7 +163,7 @@ public class EnemyBasic : MonoBehaviour, IHitable
         Destroy(gameObject, 2);
     }
 
-    void IHitable.TakeHit(float damage, WeaponData weapon)
+    public void TakeHit(float damage, WeaponData weapon)
     {
         if(weapon != null)
         {
