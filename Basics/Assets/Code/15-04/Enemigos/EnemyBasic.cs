@@ -41,6 +41,11 @@ public class EnemyBasic : MonoBehaviour, IHitable
 
     public bool controlador;
 
+    float stung;
+
+    public IEnumerator coroutine;
+
+
     private void OnEnable()
     {
         GameStateManager.OnGameStateChanged += HandleGameState;
@@ -96,6 +101,7 @@ public class EnemyBasic : MonoBehaviour, IHitable
 
     void Start()
     {
+        coroutine = Stung(null);
         currentHealth = maxHealth;
         agent = GetComponent<NavMeshAgent>();
         agent.stoppingDistance = 2;
@@ -238,29 +244,41 @@ public class EnemyBasic : MonoBehaviour, IHitable
         }
     }
 
-    IEnumerator Stung(WeaponData weapon)
+    public void StungCall(float stungTime)
     {
-        float stung = 0;
+        stung = stungTime;
+        StartCoroutine(Stung(null));
+    }
 
-        switch (typeEnemy)
+    public IEnumerator Stung(WeaponData weapon)
+    {
+
+        if (weapon != null)
         {
-            case TypeEnemys.Common:
-                break;
-            case TypeEnemys.Rare:
-                stung = weapon.stungTime * 0.8f;
-                break;
-            case TypeEnemys.Boos:
-                stung = weapon.stungTime * 0.5f;
-                break;
-            case TypeEnemys.FinalBoss:
-                stung = weapon.stungTime * 0.2f;
-                break;
+            switch (typeEnemy)
+            {
+                case TypeEnemys.Common:
+                    break;
+                case TypeEnemys.Rare:
+                    stung = weapon.stungTime * 0.8f;
+                    break;
+                case TypeEnemys.Boos:
+                    stung = weapon.stungTime * 0.5f;
+                    break;
+                case TypeEnemys.FinalBoss:
+                    stung = weapon.stungTime * 0.2f;
+                    break;
+            }
         }
 
         agent.speed = 0;
+        transform.GetChild(0).GetComponent<Renderer>().material.color = Color.blue;
         yield return new WaitForSeconds(stung);
+
         agent.speed = 3.5f;
-        yield return new WaitForSeconds(weapon.stungTime * 1.5f);
+        transform.GetChild(0).GetComponent<Renderer>().material.color = Color.white;
+        yield return new WaitForSeconds(stung * 1.5f);
+
         coolDownActive = false;
     }
 

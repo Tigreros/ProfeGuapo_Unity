@@ -10,6 +10,8 @@ public class Bomba : MonoBehaviour
     public float radius;
 
     public float time;
+    public bool boomFreeze;
+    public float boomFreezeTimerStung;
 
     void Start()
     {
@@ -21,7 +23,14 @@ public class Bomba : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Floor"))
         {
-            EventBusBoom.Publish("AreaDamage", transform.position, damage, radius);
+            if (!boomFreeze)
+            {
+                EventBusBoom.Publish("AreaDamage", transform.position, damage, radius);
+            }
+            else
+            {
+                EventBusBoom.Publish("Stung", transform.position, boomFreezeTimerStung, radius);
+            }
         }
     }
 
