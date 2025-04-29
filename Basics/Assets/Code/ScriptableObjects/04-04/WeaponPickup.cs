@@ -8,6 +8,7 @@ public class WeaponPickup : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
         WeaponInventory inv = other.GetComponent<WeaponInventory>();
+        //InventoryNavigation nav = other.GetComponent<InventoryNavigation>().FindChildren();
 
         if(inv != null)
         {

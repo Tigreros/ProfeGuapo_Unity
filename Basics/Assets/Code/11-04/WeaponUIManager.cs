@@ -83,6 +83,7 @@ public class WeaponUIManager : MonoBehaviour
         weaponSlotPrefab = Resources.Load<GameObject>("WeaponSlotPrefab");
 
         gridParent = GameObject.Find("Inventory").transform;
+        gridParent.gameObject.SetActive(false);
 
 
         fusionButton = GameObject.Find("Fusion").GetComponent<Button>();

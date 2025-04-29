@@ -18,8 +18,8 @@ public class InventoryUIManager : MonoBehaviour
 
         inventoryInstance = this;
 
-        inventoryPanel = GameObject.Find("PanelInventario");
-        inventoryPanel.SetActive(false);
+        inventoryPanel = GameObject.Find("Inventory");
+        //inventoryPanel.SetActive(false);
 
         DontDestroyOnLoad(this);
     }

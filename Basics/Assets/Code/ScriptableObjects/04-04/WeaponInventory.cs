@@ -30,7 +30,7 @@ public class WeaponInventory : MonoBehaviour
         if (autoFusion)
         {
 
-            print(newWeapon);
+            //print(newWeapon);
 
             bool fusionOcurriendo = true;
 

@@ -41,4 +41,9 @@ public class WeaponSlotUI : MonoBehaviour
         weaponData = data;
         uiManager = manager;
     }
+
+    public void ShowWeaponsDetails()
+    {
+        uiManager.WeaponsDetails(weaponData);
+    }
 }

@@ -4,31 +4,21 @@ using System.Collections.Generic;
 
 public class InventoryNavigation : MonoBehaviour
 {
-    public List<GameObject> slotVisuals = new();
-
-    // Este valor sera tomado en un futuro directamente del grid layout group
-    private int columns;
+    public List<GameObject> slotVisuals;
+    public int columns;
     private int index = 0;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         columns = GetComponent<GridLayoutGroup>().constraintCount;
-
-        int childCount = transform.childCount;
-
-        for (int i = 0; i < childCount; i++)
-        {
-            slotVisuals.Add(transform.GetChild(i).gameObject);
-        }
-
+        //FindChildren();
         HighlightSlot(index);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        //print(transform.childCount);
+
+        slotVisuals = WeaponUIManager.instance_WeaponManager.slot;
 
         if (!InventoryUIManager.inventoryInstance.IsInventoryOpen()) return;
 
@@ -47,8 +37,6 @@ public class InventoryNavigation : MonoBehaviour
         if (index >= slotVisuals.Count) index = 0;
         if (index < 0) index = slotVisuals.Count - 1;
 
-        //index = Mathf.Clamp(index, 0, slotVisuals.Count - 1);
-
         if (prevIndex != index)
         {
             HighlightSlot(index);
@@ -56,11 +44,22 @@ public class InventoryNavigation : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Backspace))
         {
-            slotVisuals[index].GetComponent<TEXTOTOGUAPO>().stringear();
+            //slotVisuals[index].GetComponent<TEXTOTOGUAPO>().stringear();
+            slotVisuals[index].GetComponent<WeaponSlotUI>().ShowWeaponsDetails();
         }
         // WeaponSlotUI.OnSelect();
-
     }
+
+    public void FindChildren()
+    {
+        int childCount = transform.childCount;
+
+        for (int i = 0; i < childCount; i++)
+        {
+            slotVisuals.Add(transform.GetChild(i).gameObject);
+        }
+    }
+
 
     void HighlightSlot(int newIndex)
     {
@@ -81,6 +80,5 @@ public class InventoryNavigation : MonoBehaviour
             //    img.color =  Color.green;
             //}
         }
-
     }
 }
