@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a2250a6564992b40b9140930fb20d11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponToGive: {fileID: 11400000, guid: af6befef63029254ab79497add43a93d, type: 2}
+  weaponToGive: {fileID: 11400000, guid: e2361fd2e697f6f44926f9388e22e7d6, type: 2}
 --- !u!65 &-8083542685195951135
 BoxCollider:
   m_ObjectHideFlags: 0
