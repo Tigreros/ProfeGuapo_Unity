@@ -209,7 +209,7 @@ public class EnemyBasic : MonoBehaviour, IHitable
             Die();
         }
 
-        VisualDamage.visualDamageInstance.VisualDamageFunction(this.gameObject, damage);
+        CreatePoolVisualDamage.Instance.AssingVisualDamageFunction(this.gameObject, damage);
     }
 
     public void Vision()
