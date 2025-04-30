@@ -169,6 +169,13 @@ public class EnemyBasic : MonoBehaviour, IHitable
         Destroy(gameObject, 2);
     }
 
+    [ContextMenu("takeHit")]
+    public void takehit()
+    {
+        TakeHit(160, null);
+    }
+
+
     public void TakeHit(float damage, WeaponData weapon)
     {
         if(weapon != null)
@@ -186,6 +193,11 @@ public class EnemyBasic : MonoBehaviour, IHitable
         }
 
         currentHealth -= damage;
+
+
+
+
+
         Debug.Log($"{gameObject.name} recibio {damage} de daño. Vida restante: {currentHealth}");
 
         enemyHealthBar.UpdateHealth(currentHealth);
@@ -196,6 +208,8 @@ public class EnemyBasic : MonoBehaviour, IHitable
         {
             Die();
         }
+
+        VisualDamage.visualDamageInstance.VisualDamageFunction(this.gameObject, damage);
     }
 
     public void Vision()
