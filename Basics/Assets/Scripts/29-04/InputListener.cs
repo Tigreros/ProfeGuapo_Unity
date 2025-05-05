@@ -16,12 +16,21 @@ public class InputListener : MonoBehaviour
 
         }
 
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            GetComponent<VidaFlick>().TakeHit(1f,null);
+        }
 
 
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            GetComponent<VidaFlick>().TakeHit(-1f, null);
+        }
 
-
-
-
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            GameStateManager.instance_GameStateManager.ChangeState(GameState.Pausa);
+        }
 
 
 
