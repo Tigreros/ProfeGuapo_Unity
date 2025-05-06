@@ -7148,6 +7148,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3568536144463358668, guid: 849424de7631f3948a031c865c259765, type: 3}
+      propertyPath: autoFusion
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4696031874003003843, guid: 849424de7631f3948a031c865c259765, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.5
