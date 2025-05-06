@@ -21,7 +21,10 @@ public class SessionManager : MonoBehaviour
         LoadSession();
     }
 
-
+    public void ChangeUserName(string newUserName)
+    {
+        nameUser = newUserName;
+    }
 
     public void SaveSession()
     {
@@ -49,4 +52,38 @@ public class SessionManager : MonoBehaviour
             session.sfxVolume = 1f;
         }
     }
+
+
+
+
+
+
+
+    [ContextMenu("SAVE")]
+    public void SaveInventory()
+    {
+        WeaponInventory inventory = GameObject.Find("Flick").GetComponent<WeaponInventory>();
+
+        InventorySaveData data = new InventorySaveData();
+
+        foreach (var w in inventory.inventory)
+        {
+            data.inventory.Add(WeaponSerializer.ToSaveData(w));
+        }
+
+        if(inventory.equippedWeapon != null)
+        {
+            data.equippedWeapon = WeaponSerializer.ToSaveData(inventory.equippedWeapon);
+        }
+
+        string json = JsonUtility.ToJson(data, true);
+        File.WriteAllText(Application.persistentDataPath + $"/{session.playerName}_inventory.json", json);
+    }
+
+
+
+
+
+
+
 }

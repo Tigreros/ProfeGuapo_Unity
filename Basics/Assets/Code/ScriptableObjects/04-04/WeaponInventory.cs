@@ -7,7 +7,7 @@ public class WeaponInventory : MonoBehaviour
     public List<WeaponData> inventory = new List<WeaponData>();
     public WeaponData equippedWeapon;
 
-    public int index = 0;
+    private int index = 0;
 
     public bool autoFusion;
 
