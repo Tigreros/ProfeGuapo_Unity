@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.IO;
+using System.Linq;
 
 public class SessionManager : MonoBehaviour
 {
@@ -7,6 +8,9 @@ public class SessionManager : MonoBehaviour
     private string path;
     private PlayerSessionData session;
     public string nameUser;
+
+    public WeaponData[] baseReferences;
+
 
     private void Awake()
     {
@@ -84,6 +88,30 @@ public class SessionManager : MonoBehaviour
 
 
 
+    [ContextMenu("LOAD")]
+    public void LoadInventory()
+    {
+        WeaponInventory inventory = GameObject.Find("Flick").GetComponent<WeaponInventory>();
+        string path = Application.persistentDataPath + "/fea_inventory.json";
 
+        if (!File.Exists(path)) return;
 
+        string json = File.ReadAllText(path);
+        InventorySaveData data = JsonUtility.FromJson<InventorySaveData>(json);
+
+        inventory.inventory.Clear();
+
+        foreach (var saved in data.inventory)
+        {
+            WeaponData clone = WeaponSerializer.ToWeaponData(saved, baseReferences[0]);
+
+            inventory.inventory.Add(clone);
+            inventory.AddWeapon(clone);
+        }
+
+        if(data.equippedWeapon != null)
+        {
+            inventory.equippedWeapon = WeaponSerializer.ToWeaponData(data.equippedWeapon, baseReferences[0]);
+        }
+    }
 }

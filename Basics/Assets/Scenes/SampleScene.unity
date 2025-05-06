@@ -5125,7 +5125,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2081351995}
   m_HandleRect: {fileID: 2081351994}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -6348,6 +6348,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 2
+--- !u!1 &1803189718
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1803189720}
+  - component: {fileID: 1803189719}
+  m_Layer: 0
+  m_Name: SessionManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1803189719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803189718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa74c191bc74b5d4cabab7941671ef43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameUser: POPO
+  baseReferences:
+  - {fileID: 11400000, guid: 38f91fb72ef48844e9c8923af735826f, type: 2}
+  - {fileID: 11400000, guid: 2819cfe7410059248b3b4d8ad3e86bc9, type: 2}
+  - {fileID: 11400000, guid: db18e5f356efd6042b913a7c05a3b76f, type: 2}
+--- !u!4 &1803189720
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803189718}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 241.61566, y: 334.33157, z: -75.43052}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1817666810
 GameObject:
   m_ObjectHideFlags: 0
@@ -7254,3 +7303,4 @@ SceneRoots:
   - {fileID: 1777034276}
   - {fileID: 1941117341}
   - {fileID: 853540621}
+  - {fileID: 1803189720}
