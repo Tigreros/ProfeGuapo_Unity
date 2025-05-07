@@ -8,7 +8,7 @@ public class PauseMenu : MonoBehaviour
 
     private void OnEnable()
     {
-        //GameStateManager.OnGameStateChanged += HandleGameState;
+        GameStateManager.OnGameStateChanged += HandleGameState;
     }
 
     private void OnDisable()
@@ -17,9 +17,6 @@ public class PauseMenu : MonoBehaviour
     }
     void HandleGameState(GameState state)
     {
-        //print("jnhgclyfluyfck,ckgckgcjdjxsjfxsjmfdxjm");
-
-
 
         switch (state)
         {
@@ -28,7 +25,7 @@ public class PauseMenu : MonoBehaviour
                 break;
 
             case GameState.EnJuego:
-                if (prefab != null) return;
+                if (prefab != null) Destroy(prefab);
                 break;
 
             case GameState.Pausa:
@@ -44,22 +41,9 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    private void Awake()
-    {
-        GameStateManager.OnGameStateChanged += HandleGameState;
+    //private void Awake()
+    //{
+    //    GameStateManager.OnGameStateChanged += HandleGameState;
+    //}
 
-    }
-
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

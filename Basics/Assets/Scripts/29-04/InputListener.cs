@@ -29,7 +29,17 @@ public class InputListener : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            GameStateManager.instance_GameStateManager.ChangeState(GameState.Pausa);
+
+            //print(GameStateManager.instance_GameStateManager.currentState);
+
+            if(GameStateManager.instance_GameStateManager.currentState == GameState.Pausa)
+            {
+                GameStateManager.instance_GameStateManager.ChangeState(GameState.EnJuego);
+            }
+            else
+            {
+                GameStateManager.instance_GameStateManager.ChangeState(GameState.Pausa);
+            }
         }
 
 

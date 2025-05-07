@@ -92,7 +92,7 @@ public class SessionManager : MonoBehaviour
     public void LoadInventory()
     {
         WeaponInventory inventory = GameObject.Find("Flick").GetComponent<WeaponInventory>();
-        string path = Application.persistentDataPath + "/fea_inventory.json";
+        string path = Application.persistentDataPath + "/_inventory.json";
 
         if (!File.Exists(path)) return;
 
@@ -107,11 +107,38 @@ public class SessionManager : MonoBehaviour
 
             inventory.inventory.Add(clone);
             inventory.AddWeapon(clone);
+
+            print(saved);
         }
 
         if(data.equippedWeapon != null)
         {
             inventory.equippedWeapon = WeaponSerializer.ToWeaponData(data.equippedWeapon, baseReferences[0]);
         }
+    }
+
+
+
+    public void FastSave()
+    {
+        WeaponInventory inventory = GameObject.Find("Flick").GetComponent<WeaponInventory>();
+
+        InventorySaveData data = new InventorySaveData();
+
+        foreach (var w in inventory.inventory)
+        {
+            data.inventory.Add(WeaponSerializer.ToSaveData(w));
+        }
+
+        if (inventory.equippedWeapon != null)
+        {
+            data.equippedWeapon = WeaponSerializer.ToSaveData(inventory.equippedWeapon);
+        }
+
+        string json = JsonUtility.ToJson(data, true);
+        string path = Application.temporaryCachePath + $"/{session.playerName}_inventory.json";
+        File.WriteAllText(path, json);
+
+        Debug.Log("Sesion guardada en la ruta: " + path);
     }
 }

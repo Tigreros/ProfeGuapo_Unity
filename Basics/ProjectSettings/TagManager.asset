@@ -8,6 +8,8 @@ TagManager:
   - Objetivos
   - Floor
   - Enemy
+  - SaveZone
+  - FastSaveZone
   layers:
   - Default
   - TransparentFX
