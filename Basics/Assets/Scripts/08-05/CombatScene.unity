@@ -322,7 +322,7 @@ GameObject:
   - component: {fileID: 1052653998}
   - component: {fileID: 1052653996}
   - component: {fileID: 1052653997}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1924,26 +1924,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &1389960662 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5986345344701831004, guid: 128ba2ed0b738504a84ffa3065467df7, type: 3}
-  m_PrefabInstance: {fileID: 3616953567686273531}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1389960668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1389960662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d0fdc681a1c4b24cb51357d0b9abd1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb2D: {fileID: 0}
-  animator: {fileID: 0}
-  spriteRenderer: {fileID: 0}
 --- !u!1 &1521663929
 GameObject:
   m_ObjectHideFlags: 0
@@ -2000,10 +1980,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2293715565770490455, guid: 128ba2ed0b738504a84ffa3065467df7, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2293715565770490455, guid: 128ba2ed0b738504a84ffa3065467df7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.56
       objectReference: {fileID: 0}
@@ -2043,25 +2019,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4971084502385247792, guid: 128ba2ed0b738504a84ffa3065467df7, type: 3}
-      propertyPath: m_FlipX
-      value: 0
+    - target: {fileID: 4271824190839858561, guid: 128ba2ed0b738504a84ffa3065467df7, type: 3}
+      propertyPath: m_WhatIsGround.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 5986345344701831004, guid: 128ba2ed0b738504a84ffa3065467df7, type: 3}
       propertyPath: m_Name
       value: Player2D
       objectReference: {fileID: 0}
-    - target: {fileID: 6780437078792058539, guid: 128ba2ed0b738504a84ffa3065467df7, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 770771d08cd384e4288b591676f10c27, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5986345344701831004, guid: 128ba2ed0b738504a84ffa3065467df7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1389960668}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 128ba2ed0b738504a84ffa3065467df7, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

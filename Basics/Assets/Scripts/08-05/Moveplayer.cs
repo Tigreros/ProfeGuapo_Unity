@@ -6,6 +6,9 @@ public class Moveplayer : MonoBehaviour
     public Rigidbody2D m_Rigidbody2D;
     public Animator animator;
     public SpriteRenderer spriteRenderer;
+    public Transform t_groundChecker;
+    public LayerMask m_WhatIsGround;
+    public bool m_IsGround;
 
     private Vector3 m_Velocity = Vector3.zero;
     private float m_MovementSmoothing = .05f;
@@ -20,6 +23,7 @@ public class Moveplayer : MonoBehaviour
         m_Rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        t_groundChecker = transform.GetChild(0);
     }
 
     // Update is called once per frame
@@ -47,5 +51,30 @@ public class Moveplayer : MonoBehaviour
         }
 
         animator.SetInteger("WalkValue", moveDirection);
+
+
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            m_Rigidbody2D.AddForce(new Vector2(0f, 400f));
+        }
+
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(t_groundChecker.position, 0.2f, m_WhatIsGround);
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            if (colliders[i].gameObject != gameObject)
+            {
+                animator.SetBool("Jump", false);
+                m_IsGround = true;
+            }
+        }
+
+        if(colliders.Length == 0)
+        {
+            animator.SetBool("Jump", true);
+            m_IsGround = false;
+        }
+
+
     }
 }
