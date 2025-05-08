@@ -48,13 +48,22 @@ public class WeaponAttack : MonoBehaviour
 
                 if (target != null)
                 {
-                    float multiplier = GetDamageMultiplier(weapon.rarity);
-                    float finalDamage = weapon.damage * multiplier;
+                    if (Vector3.Angle(hit.collider.transform.forward, attackPoint.transform.forward) < 50)
+                    {
+                        Debug.Log("He golpeado por la espalda");
+                    }
+                    else
+                    {
+                        Debug.Log("He comenzado combate");
+                    }
 
-                    target.TakeHit(finalDamage, weapon);
-                    Debug.Log($"Hemos atacado con {weapon.weaponName}({weapon.rarity}), y hemos causado {finalDamage} de daño.");
+                    //float multiplier = GetDamageMultiplier(weapon.rarity);
+                    //float finalDamage = weapon.damage * multiplier;
 
-                    ApplyEffectIfAny(hit.collider, weapon);
+                    //target.TakeHit(finalDamage, weapon);
+                    //Debug.Log($"Hemos atacado con {weapon.weaponName}({weapon.rarity}), y hemos causado {finalDamage} de daño.");
+
+                    //ApplyEffectIfAny(hit.collider, weapon);
                 }
             }
             else

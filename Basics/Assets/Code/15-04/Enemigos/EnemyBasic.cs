@@ -147,6 +147,31 @@ public class EnemyBasic : MonoBehaviour, IHitable
                 {
                     GameStateManager.instance_GameStateManager.ChangeState(GameState.Combate);
                     EventBus.Publish("OnStartCombat");
+
+                    if (enemyTarget != null)
+                    {
+                        RaycastHit hit;
+
+                        Debug.DrawRay(transform.position + new Vector3(0, 1, 0), transform.forward * 3, Color.red, 55);
+
+
+                        if (Physics.Raycast(transform.position + new Vector3 (0,1,0), transform.forward, out hit, 3))
+                        {
+                            if (hit.collider.CompareTag("Player"))
+                            {
+                                if (Vector3.Angle(hit.collider.transform.forward, transform.forward) < 50)
+                                {
+    
+                                    Debug.Log("Te han atacado por la espalda");
+                                }
+                                else
+                                {
+                                    Debug.Log("Cmienza combate por enemigo");
+                                }
+                            }
+                        }
+                    }
+
                     controlador = true;
                 }
             }
