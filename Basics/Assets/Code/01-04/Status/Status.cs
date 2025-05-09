@@ -4,6 +4,7 @@ public enum StatusEffectType
     Freeze,
     stunned,
     Poison,
+    Heal,
     None
 }
 
