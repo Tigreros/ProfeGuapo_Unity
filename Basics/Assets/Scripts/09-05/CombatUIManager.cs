@@ -56,6 +56,11 @@ public class CombatUIManager : MonoBehaviour
         {
             GameObject btn = Instantiate(attackButtonPrefab, attackButtonParent);
             btn.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = attack.name;
+
+            btn.GetComponent<ButtonHover>().sprite = attack.icon;
+            btn.GetComponent<ButtonHover>().damage = attack.damage;
+            btn.GetComponent<ButtonHover>().effect = attack.attackEffect;
+
             currentButtons.Add(btn);
 
             btn.GetComponent<Button>().onClick.AddListener(() => 
@@ -74,7 +79,7 @@ public class CombatUIManager : MonoBehaviour
 
     public void ShowEffect(CombatantData receiver, StatusEffectType attackEffect)
     {
-        battleText.text += $" \n {receiver.displayName} uso {attackEffect.ToString()}";
+        battleText.text += $" \n {receiver.displayName} esta {attackEffect.ToString()}";
     }
 
     public void ShowUpdateHealth(CombatantData receiver)

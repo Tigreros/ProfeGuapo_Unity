@@ -15,5 +15,5 @@ MonoBehaviour:
   attackName: rapido4
   damage: 40
   description: asdf
-  attackEffect: 5
+  attackEffect: 2
   icon: {fileID: 1775370960, guid: 5dc65e5d330bb354cb06f89f66b71a42, type: 3}

@@ -102,7 +102,7 @@ public class BattleManager : MonoBehaviour
         if (attack.attackEffect != StatusEffectType.None)
         {
             uiManager.ShowEffect(receiver, attack.attackEffect);
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(3);
         }
 
         onComplete?.Invoke();
