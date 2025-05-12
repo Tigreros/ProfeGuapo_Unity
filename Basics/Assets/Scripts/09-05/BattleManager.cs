@@ -20,10 +20,12 @@ public class BattleManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        enemyData = BattleManagerPersistant.instance_BattleManagerPersistant.enemys[BattleManagerPersistant.instance_BattleManagerPersistant.indexEnemy];
+        if (enemyData == null)
+        {
+            enemyData = BattleManagerPersistant.instance_BattleManagerPersistant.enemys[BattleManagerPersistant.instance_BattleManagerPersistant.indexEnemy];
+            firstAttack = BattleManagerPersistant.instance_BattleManagerPersistant.firstAttack;
+        }
         enemy = enemyData;
-
-        firstAttack = BattleManagerPersistant.instance_BattleManagerPersistant.firstAttack;
 
         playerData = Resources.Load<CombatantData>("player");
         player = playerData;
