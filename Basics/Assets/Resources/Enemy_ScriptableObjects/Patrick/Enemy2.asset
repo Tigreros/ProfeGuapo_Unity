@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8039fc55daa8534459a1dd69b3be6b82, type: 3}
-  m_Name: Enemy
+  m_Name: Enemy2
   m_EditorClassIdentifier: 
-  displayName: Isaac
-  portrait: {fileID: -1435490815, guid: d44f92f61a8a53f4ab99bc5b1114c062, type: 3}
+  displayName: Cacodemon
+  portrait: {fileID: 1848506252, guid: d44f92f61a8a53f4ab99bc5b1114c062, type: 3}
   maxHP: 150
   CurrentHP: 150
   availableAttacks:

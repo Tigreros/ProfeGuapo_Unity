@@ -25,19 +25,26 @@ public class CombatUIManager : MonoBehaviour
     public TextMeshProUGUI battleText;
     public List<GameObject> currentButtons = new();
 
+    public CombatantData player;
+    public CombatantData enemy;
+
 
 
     public void SetupUI(CombatantData playerData, CombatantData enemyData)
     {
-        playerPortrait.sprite = playerData.portrait;
-        playerName.text = playerData.displayName;
-        playerHealth.maxValue = playerData.maxHP;
-        playerHealth.value = playerData.CurrentHP;
+        player = playerData;
+        enemy = enemyData;
 
-        enemyPortrait.sprite = enemyData.portrait;
-        enemyName.text = enemyData.displayName;
-        enemyHealth.maxValue = enemyData.maxHP;
-        enemyHealth.value = enemyData.CurrentHP;
+        playerPortrait.sprite = player.portrait;
+        playerName.text = player.displayName;
+        playerHealth.maxValue = player.maxHP;
+        playerHealth.value = player.CurrentHP;
+
+        enemyPortrait.sprite = enemy.portrait;
+        enemyName.text = enemy.displayName;
+        enemyHealth.maxValue = enemy.maxHP;
+        enemyHealth.value = enemy.maxHP;
+        enemy.CurrentHP = enemy.maxHP;
 
         battleText.text = $"¡Combate entre {playerName.text} & {enemyName.text}";
     }
@@ -48,7 +55,7 @@ public class CombatUIManager : MonoBehaviour
         foreach (var attack in availableAttacks)
         {
             GameObject btn = Instantiate(attackButtonPrefab, attackButtonParent);
-            btn.GetComponent<TextMeshProUGUI>().text = attack.name;
+            btn.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = attack.name;
             currentButtons.Add(btn);
 
             btn.GetComponent<Button>().onClick.AddListener(() => 
@@ -72,13 +79,13 @@ public class CombatUIManager : MonoBehaviour
 
     public void ShowUpdateHealth(CombatantData receiver)
     {
-        if (receiver.displayName == playerName.text)
+        if (receiver == player)
         {
-            playerHealth.value = receiver.CurrentHP;
+            playerHealth.value = player.CurrentHP;
         }
         else
         {
-            enemyHealth.value = receiver.CurrentHP;
+            enemyHealth.value = enemy.CurrentHP;
         }
     }
 
@@ -100,7 +107,7 @@ public class CombatUIManager : MonoBehaviour
         foreach (var btn in currentButtons)
         {
             Destroy(btn);
-            currentButtons.Clear();
         }
+        currentButtons.Clear();
     }
 }

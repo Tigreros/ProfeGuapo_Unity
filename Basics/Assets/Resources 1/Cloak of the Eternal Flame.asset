@@ -9,11 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df14c471ca8bbb344a4a4676db7506dd, type: 3}
-  m_Name: AtaqueRapido 4
+  m_Script: {fileID: 11500000, guid: f7c17560434cc4b4db8269f3fae850a5, type: 3}
+  m_Name: Cloak of the Eternal Flame
   m_EditorClassIdentifier: 
-  attackName: rapido4
-  damage: 40
-  description: asdf
-  attackEffect: 5
-  icon: {fileID: 1775370960, guid: 5dc65e5d330bb354cb06f89f66b71a42, type: 3}
+  weaponName: Cloak of the Eternal Flame
+  damage: 110
+  range: 1.8
+  weaponPrefab: {fileID: 0}
+  level: 20
+  rarity: 2
+  effectType: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AtaqueRapido 3
   m_EditorClassIdentifier: 
   attackName: rapido3
-  damage: 20
+  damage: 30
   description: asdf
   attackEffect: 5
   icon: {fileID: 1057388977, guid: 5dc65e5d330bb354cb06f89f66b71a42, type: 3}

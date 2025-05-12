@@ -69,7 +69,7 @@ public class EnemyBasic : MonoBehaviour, IHitable
             }
             else
             {
-                Debug.Log("DSDAFDFDSAFASFDA12321343214321432154532634576537658759875986FDAf");
+                //Debug.Log("DSDAFDFDSAFASFDA12321343214321432154532634576537658759875986FDAf");
             }
         }
     }
@@ -161,11 +161,13 @@ public class EnemyBasic : MonoBehaviour, IHitable
                             {
                                 if (Vector3.Angle(hit.collider.transform.forward, transform.forward) < 50)
                                 {
-    
-                                    Debug.Log("Te han atacado por la espalda");
+                                    BattleManagerPersistant.instance_BattleManagerPersistant.LoadBattleScene(0, false);
+
+                                    //Debug.Log("Te han atacado por la espalda");
                                 }
                                 else
                                 {
+                                    BattleManagerPersistant.instance_BattleManagerPersistant.LoadBattleScene(0, System.Convert.ToBoolean(UnityEngine.Random.Range(0, 2)));
                                     Debug.Log("Cmienza combate por enemigo");
                                 }
                             }

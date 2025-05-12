@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Code/10-04/Secene2.unity
     guid: db52a182262ee42419f74a75bfb811cc
+  - enabled: 1
+    path: Assets/Scripts/08-05/CombatScene.unity
+    guid: 7afe40d0d8106224db595148851126a8
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
   m_UseUCBPForAssetBundles: 0

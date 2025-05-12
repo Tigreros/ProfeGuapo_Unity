@@ -50,11 +50,13 @@ public class WeaponAttack : MonoBehaviour
                 {
                     if (Vector3.Angle(hit.collider.transform.forward, attackPoint.transform.forward) < 50)
                     {
-                        Debug.Log("He golpeado por la espalda");
+                        //Debug.Log("He golpeado por la espalda");
+                        BattleManagerPersistant.instance_BattleManagerPersistant.LoadBattleScene(0,true);
                     }
                     else
                     {
-                        Debug.Log("He comenzado combate");
+                        //Debug.Log("He comenzado combate");
+                        BattleManagerPersistant.instance_BattleManagerPersistant.LoadBattleScene(0, System.Convert.ToBoolean(UnityEngine.Random.Range(0, 2)));
                     }
 
                     //float multiplier = GetDamageMultiplier(weapon.rarity);

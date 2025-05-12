@@ -12,35 +12,53 @@ public class BattleManager : MonoBehaviour
     public bool playerTurn = true;
     public bool inBattle = false;
 
+    public CombatantData player;
+    public CombatantData enemy;
+
+    public bool firstAttack;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        enemyData = BattleManagerPersistant.instance_BattleManagerPersistant.enemys[BattleManagerPersistant.instance_BattleManagerPersistant.indexEnemy];
+        enemy = enemyData;
+
+        firstAttack = BattleManagerPersistant.instance_BattleManagerPersistant.firstAttack;
+
+        playerData = Resources.Load<CombatantData>("player");
+        player = playerData;
+
+        uiManager = GameObject.Find("CombatUIManager").GetComponent<CombatUIManager>();
+
         StartCoroutine(StartBattle());
     }
 
     public IEnumerator StartBattle()
     {
+        yield return new WaitForSeconds(2f);
         inBattle = true;
-        uiManager.SetupUI(playerData, enemyData);
+        uiManager.SetupUI(player, enemy);
         yield return new WaitForSeconds(2);
-        PlayerTurn();
+        
+        if (firstAttack) { PlayerTurn(); }
+        else { EnemyTurn(); }
     }
 
     private void PlayerTurn()
     {
         playerTurn = true;
-        uiManager.ShowPlayerOptions(playerData.availableAttacks, OnPlayerSelectAttack);
+        uiManager.ShowPlayerOptions(player.availableAttacks, OnPlayerSelectAttack);
     }
 
     private void OnPlayerSelectAttack(AttackData selectedAttack)
     {
         playerTurn = false;
-        StartCoroutine(ExecuteAttack(playerData, enemyData, selectedAttack, EnemyTurn));
+        StartCoroutine(ExecuteAttack(player, enemy, selectedAttack, EnemyTurn));
     }
 
     private void EnemyTurn()
     {
-        if(enemyData.CurrentHP <= 0)
+        if(enemy.CurrentHP <= 0)
         {
             EndBattle(true);
             return;
@@ -52,13 +70,13 @@ public class BattleManager : MonoBehaviour
 
     private IEnumerator EnemyAttack()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(3f);
 
-        AttackData randomAttack = enemyData.availableAttacks[UnityEngine.Random.Range(0,enemyData.availableAttacks.Count)];
+        AttackData randomAttack = enemy.availableAttacks[UnityEngine.Random.Range(0, enemy.availableAttacks.Count)];
 
-        yield return ExecuteAttack(enemyData, playerData, randomAttack, () =>
+        yield return ExecuteAttack(enemy, player, randomAttack, () =>
         {
-            if (playerData.CurrentHP <= 0)
+            if (player.CurrentHP <= 0)
             {
                 EndBattle(false);
             }
@@ -72,7 +90,7 @@ public class BattleManager : MonoBehaviour
     private IEnumerator ExecuteAttack(CombatantData attacker, CombatantData receiver, AttackData attack, System.Action onComplete)
     {
         uiManager.ShowAttack(attacker.displayName, attack.attackName);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(3);
 
         receiver.CurrentHP -= attack.damage;
         receiver.CurrentHP = Mathf.Max(0,receiver.CurrentHP);
