@@ -7546,6 +7546,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4767589047877780079, guid: 849424de7631f3948a031c865c259765, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4767589047877780079, guid: 849424de7631f3948a031c865c259765, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4767589047877780079, guid: 849424de7631f3948a031c865c259765, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.1
+      objectReference: {fileID: 0}
     - target: {fileID: 5359416285244175225, guid: 849424de7631f3948a031c865c259765, type: 3}
       propertyPath: m_Name
       value: Flick

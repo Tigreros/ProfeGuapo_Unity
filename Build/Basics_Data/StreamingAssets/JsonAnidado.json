@@ -1,0 +1,12 @@
+{
+    "nombre" : "Knight",
+    "stats" : 
+    {
+    "vida" :
+        {
+            "porcentaje" : 50,
+            "Estado" : "Estas Topemalo"
+        },
+    "mana" : 40
+    }
+}
