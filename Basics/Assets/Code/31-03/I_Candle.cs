@@ -3,7 +3,7 @@ using UnityEngine;
 public class I_Candle : MonoBehaviour, IHitable, IHealable, IStatusEffectReceiver
 {
 
-    private int health = 100;
+    public int health = 100;
 
     public GameObject[] dropObject;
 
@@ -23,11 +23,12 @@ public class I_Candle : MonoBehaviour, IHitable, IHealable, IStatusEffectReceive
         if (this.enabled)
         {
             Debug.Log("Vela se rompe " + transform.name + "damage: " + damage);
+            health -= Mathf.RoundToInt(damage);
             //Debug.Log($"{gameObject.name} recibio {damage} de daño. Vida actual: {health}");
-            Instantiate(dropObject[Random.Range(0, 3)], transform.position, transform.rotation);
-            CreatePoolVisualDamage.Instance.AssingVisualDamageFunction(this.gameObject, damage);
+            //Instantiate(dropObject[Random.Range(0, 3)], transform.position, transform.rotation);
+            //CreatePoolVisualDamage.Instance.AssingVisualDamageFunction(this.gameObject, damage);
 
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 
