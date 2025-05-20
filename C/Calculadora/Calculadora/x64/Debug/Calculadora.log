@@ -1,7 +1,2 @@
 ﻿  main.c
-C:\Users\Profesor\Documents\Curso Tarde\C\Calculadora\main.c(17,23): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Profesor\Documents\Curso Tarde\C\Calculadora\main.c(16,15): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\Profesor\Documents\Curso Tarde\C\Calculadora\main.c(17,18): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\Profesor\Documents\Curso Tarde\C\Calculadora\main.c(7,7): warning C4101: 'operaciones': variable local sin referencia
-C:\Users\Profesor\Documents\Curso Tarde\C\Calculadora\main.c(6,9): warning C4101: 'b': variable local sin referencia
-  Calculadora.vcxproj -> C:\Users\Profesor\Documents\Curso Tarde\C\Calculadora\x64\Debug\Calculadora.exe
+  Calculadora.vcxproj -> C:\Users\Profesor\Documents\Curso Tarde\Unity\ProfeGuapo_Unity\C\Calculadora\x64\Debug\Calculadora.exe
