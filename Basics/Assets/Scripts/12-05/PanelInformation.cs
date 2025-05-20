@@ -8,9 +8,11 @@ public class PanelInformation : MonoBehaviour
     public static PanelInformation instance_PanelInformation
     { get; private set; }
 
+
     public Image sprite;
     public TextMeshProUGUI damage;
     public TextMeshProUGUI effect;
+
 
     public void Start()
     {
@@ -21,10 +23,12 @@ public class PanelInformation : MonoBehaviour
         effect = transform.GetChild(0).GetChild(1).GetChild(1).GetComponent<TextMeshProUGUI>();
     }
 
+
     public void ChangePanelInformation(Sprite spriteAttack, string damageAttack, string effectAttack)
     {
         sprite.sprite = spriteAttack;
         damage.text = "DMG :" + damageAttack;
         effect.text = "Effect : " + effectAttack;
     }
+
 }

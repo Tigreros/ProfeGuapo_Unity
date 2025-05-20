@@ -3,6 +3,11 @@ using static UnityEngine.GraphicsBuffer;
 
 public class adsf : MonoBehaviour
 {
+
+
+    public int a = 0, b = 3;
+
+
     void Update()
     {
         //if (Input.GetKeyDown(KeyCode.Alpha1)) 
