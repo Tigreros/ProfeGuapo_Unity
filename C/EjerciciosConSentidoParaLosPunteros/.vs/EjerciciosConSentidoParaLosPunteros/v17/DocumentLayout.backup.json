@@ -1,18 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Profesor\\Documents\\Curso Tarde\\C\\EjerciciosConSentidoParaLosPunteros\\",
+  "WorkspaceRootPath": "C:\\Users\\Profesor\\Documents\\Curso Tarde\\Unity\\ProfeGuapo_Unity\\C\\EjerciciosConSentidoParaLosPunteros\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6ECD4B1C-E121-46BD-B748-D82CE3FD1A8E}|EjerciciosConSentidoParaLosPunteros.vcxproj|C:\\Users\\Profesor\\Documents\\Curso Tarde\\C\\EjerciciosConSentidoParaLosPunteros\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6ECD4B1C-E121-46BD-B748-D82CE3FD1A8E}|EjerciciosConSentidoParaLosPunteros.vcxproj|solutionrelative:main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Profesor\\Documents\\Curso Tarde\\Unity\\ProfeGuapo_Unity\\C\\EjerciciosConSentidoParaLosPunteros\\personaje.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:personaje.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6ECD4B1C-E121-46BD-B748-D82CE3FD1A8E}|EjerciciosConSentidoParaLosPunteros.vcxproj|C:\\Users\\Profesor\\Documents\\Curso Tarde\\C\\EjerciciosConSentidoParaLosPunteros\\personaje.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6ECD4B1C-E121-46BD-B748-D82CE3FD1A8E}|EjerciciosConSentidoParaLosPunteros.vcxproj|solutionrelative:personaje.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Profesor\\Documents\\Curso Tarde\\Unity\\ProfeGuapo_Unity\\C\\EjerciciosConSentidoParaLosPunteros\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6ECD4B1C-E121-46BD-B748-D82CE3FD1A8E}|EjerciciosConSentidoParaLosPunteros.vcxproj|C:\\Users\\Profesor\\Documents\\Curso Tarde\\C\\EjerciciosConSentidoParaLosPunteros\\personaje.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6ECD4B1C-E121-46BD-B748-D82CE3FD1A8E}|EjerciciosConSentidoParaLosPunteros.vcxproj|solutionrelative:personaje.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Profesor\\Documents\\Curso Tarde\\Unity\\ProfeGuapo_Unity\\C\\EjerciciosConSentidoParaLosPunteros\\personaje.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:personaje.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,7 +21,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 399,
+          "DockedWidth": 465,
           "SelectedChildIndex": 1,
           "Children": [
             {
@@ -30,13 +30,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "personaje.h",
-              "DocumentMoniker": "C:\\Users\\Profesor\\Documents\\Curso Tarde\\C\\EjerciciosConSentidoParaLosPunteros\\personaje.h",
+              "DocumentMoniker": "C:\\Users\\Profesor\\Documents\\Curso Tarde\\Unity\\ProfeGuapo_Unity\\C\\EjerciciosConSentidoParaLosPunteros\\personaje.h",
               "RelativeDocumentMoniker": "personaje.h",
-              "ToolTip": "C:\\Users\\Profesor\\Documents\\Curso Tarde\\C\\EjerciciosConSentidoParaLosPunteros\\personaje.h",
+              "ToolTip": "C:\\Users\\Profesor\\Documents\\Curso Tarde\\Unity\\ProfeGuapo_Unity\\C\\EjerciciosConSentidoParaLosPunteros\\personaje.h",
               "RelativeToolTip": "personaje.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-05-21T14:38:24.475Z",
               "EditorCaption": ""
@@ -44,18 +44,18 @@
           ]
         },
         {
-          "DockedWidth": 838,
+          "DockedWidth": 772,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "personaje.c",
-              "DocumentMoniker": "C:\\Users\\Profesor\\Documents\\Curso Tarde\\C\\EjerciciosConSentidoParaLosPunteros\\personaje.c",
+              "DocumentMoniker": "C:\\Users\\Profesor\\Documents\\Curso Tarde\\Unity\\ProfeGuapo_Unity\\C\\EjerciciosConSentidoParaLosPunteros\\personaje.c",
               "RelativeDocumentMoniker": "personaje.c",
-              "ToolTip": "C:\\Users\\Profesor\\Documents\\Curso Tarde\\C\\EjerciciosConSentidoParaLosPunteros\\personaje.c",
+              "ToolTip": "C:\\Users\\Profesor\\Documents\\Curso Tarde\\Unity\\ProfeGuapo_Unity\\C\\EjerciciosConSentidoParaLosPunteros\\personaje.c",
               "RelativeToolTip": "personaje.c",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2025-05-21T14:38:11.305Z",
               "EditorCaption": ""
@@ -68,13 +68,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "main.c",
-              "DocumentMoniker": "C:\\Users\\Profesor\\Documents\\Curso Tarde\\C\\EjerciciosConSentidoParaLosPunteros\\main.c",
+              "DocumentMoniker": "C:\\Users\\Profesor\\Documents\\Curso Tarde\\Unity\\ProfeGuapo_Unity\\C\\EjerciciosConSentidoParaLosPunteros\\main.c",
               "RelativeDocumentMoniker": "main.c",
-              "ToolTip": "C:\\Users\\Profesor\\Documents\\Curso Tarde\\C\\EjerciciosConSentidoParaLosPunteros\\main.c",
+              "ToolTip": "C:\\Users\\Profesor\\Documents\\Curso Tarde\\Unity\\ProfeGuapo_Unity\\C\\EjerciciosConSentidoParaLosPunteros\\main.c",
               "RelativeToolTip": "main.c",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2025-05-21T14:37:03.334Z",
               "EditorCaption": ""

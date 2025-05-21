@@ -1,5 +1,6 @@
 #ifndef PERSONAJE_H
 #define PERSONAJE_H
+#define _CRT_SECURE_NO_WARNINGS
 
 typedef struct {
 	char nombre[20];
@@ -10,6 +11,6 @@ typedef struct {
 void modificar_por_valor(Personaje pj);
 void modificar_por_puntero(Personaje* pj);
 
-void imprimir_personaje(Personaje* pj);
+void imprimir_personaje(const char* etiqueta Personaje* pj);
 
 #endif

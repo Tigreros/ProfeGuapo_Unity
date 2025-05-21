@@ -5,18 +5,19 @@
 void modificar_por_valor(Personaje pj)
 {
 	pj.vida = 0;
-	//strcpy_s(pj.nombre, 10240, "Copia");
+	strcpy(pj.nombre, "Copia");
 	printf("Direccion valor: %p\n", (void*)&pj);
 }
 
 void modificar_por_puntero(Personaje* pj)
 {
 	pj->vida = 0;
-	//strcpy_s(pj->nombre, 10240, "Original");
+	strcpy(pj->nombre, "Original");
 	printf("Direccion puntero: %p\n", (void*)&pj);
 }
 
-void imprimir_personaje(Personaje* pj)
+void imprimir_personaje(const char* etiqueta Personaje* pj)
 {
-	printf("Nombre: %s | Vida : %d | Ataque : %d | Direccion externa: %p\n", pj->nombre, pj->vida, pj->ataque, (void*)&pj);
+	printf("%s - Nombre: %s | Vida : %d | Ataque : %d | Direccion externa: %p\n", etiqueta, pj->nombre, pj->vida, pj->ataque, (void*)&pj);
+
 }

@@ -13,7 +13,7 @@ int main() {
 
 	printf("\nValor al que apunta p (*p): %d: ", *p);
 
-	scanf_s("%d", &x);
+	scanf("%d", &x);
 
 	//x = 30;
 	// Modificando el valor de x a través del puntero
@@ -24,7 +24,7 @@ int main() {
 
 	printf("\nDespues al que apunta p (*p): %d: \n\n\n", *p);
 
-	scanf_s("%d", p);
+	scanf("%d", p);
 
 
 	printf("\nDespues de X: %d", x);

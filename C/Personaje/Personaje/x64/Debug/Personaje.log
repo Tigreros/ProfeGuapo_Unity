@@ -1,0 +1,3 @@
+﻿  main.c
+C:\Users\Profesor\Documents\Curso Tarde\Unity\ProfeGuapo_Unity\C\Personaje\main.c(20,12): warning C4047: 'inicializando': 'char' es distinto en los niveles de direccionamiento indirecto de 'char *'
+  Personaje.vcxproj -> C:\Users\Profesor\Documents\Curso Tarde\Unity\ProfeGuapo_Unity\C\Personaje\x64\Debug\Personaje.exe
