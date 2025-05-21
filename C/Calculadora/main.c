@@ -34,29 +34,8 @@ int main() {
 	printf("\nDespues al que apunta p (*p): %d: \n\n\n", *p);
 
 	return 0;
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
