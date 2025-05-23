@@ -9,7 +9,8 @@ int main() {
 	int cantidad = 0;
 
 	do {
-		printf("Que opcion quieres elegirads adsf a fad fafda fd fads fd fda fdas fad da fds fdsa ");
+		printf("elije una opcion para continuar");
+
 		scanf(" %c", &opcion);
 
 			switch(opcion)
@@ -36,7 +37,7 @@ int main() {
 				break;
 
 			default:
-				printf("Error, elejiste una opcion inesistente");
+				printf("Error, elejiste una opcion inexistente");
 				break;
 			}
 
