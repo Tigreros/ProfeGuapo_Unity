@@ -10,13 +10,14 @@ int main() {
 
 	do {
 		printf("elije una opcion para continuar");
+
 		scanf(" %c", &opcion);
 
 			switch(opcion)
 			{
 			case '+': {
 				int nuevos;
-				printf("Cuantos quieres: ");
+				printf("Cuantos nombre quieres a�adir quieres: ");
 				scanf(" %d", &nuevos);
 				cargar_nombres(&lista, &cantidad, nuevos);
 				break;
