@@ -36,7 +36,7 @@ int main() {
 				break;
 
 			default:
-				printf("Opcion no valida");
+				printf("Opcion no valida caca");
 				break;
 			}
 
