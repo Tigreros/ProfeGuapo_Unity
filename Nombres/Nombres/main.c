@@ -31,7 +31,7 @@ int main() {
 				break;
 
 			case 'x':
-				printf("Saliste tontito");
+				printf("Saliste del programa alelao");
 				liberar_nombres(&lista, &cantidad);
 				break;
 
