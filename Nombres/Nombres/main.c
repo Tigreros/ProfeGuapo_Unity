@@ -16,7 +16,7 @@ int main() {
 			{
 			case '+': {
 				int nuevos;
-				printf("Cuantos quieres: ");
+				printf("Cuantos nombre quieres añadir quieres: ");
 				scanf(" %d", &nuevos);
 				cargar_nombres(&lista, &cantidad, nuevos);
 				break;
