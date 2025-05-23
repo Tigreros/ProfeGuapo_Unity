@@ -31,12 +31,12 @@ int main() {
 				break;
 
 			case 'x':
-				printf("Saliste wey");
+				printf("Saliste del programa alelao");
 				liberar_nombres(&lista, &cantidad);
 				break;
 
 			default:
-				printf("Opcion no valida");
+				printf("Error, elejiste una opcion inesistente");
 				break;
 			}
 
