@@ -9,7 +9,7 @@ int main() {
 	int cantidad = 0;
 
 	do {
-		printf("Que opcion quieres elegir");
+		printf("Que opcion quieres elegirads adsf a fad fafda fd fads fd fda fdas fad da fds fdsa ");
 		scanf(" %c", &opcion);
 
 			switch(opcion)
