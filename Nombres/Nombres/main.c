@@ -16,7 +16,7 @@ int main() {
 			{
 			case '+': {
 				int nuevos;
-				printf("Cuantos nombre quieres añadir quieres: ");
+				printf("Cuantos nombre quieres aï¿½adir quieres: ");
 				scanf(" %d", &nuevos);
 				cargar_nombres(&lista, &cantidad, nuevos);
 				break;
@@ -36,7 +36,7 @@ int main() {
 				break;
 
 			default:
-				printf("Opcion no valida caca");
+				printf("Error, elejiste una opcion inesistente");
 				break;
 			}
 
