@@ -3,49 +3,24 @@
 
 int main() {
 
-	char nombre[20];
-	int vida;
-	int ataque;
+	Personaje player;
 
 	printf("Inroduce el nombre del personaje:\n");
-	scanf("%s", &nombre);
+	scanf(" %s", player.nombre);
 
 	printf("Inroduce la vida del personaje:\n");
-	scanf("%d", &vida);
+	scanf(" %d", &player.vida);
 
 	printf("Inroduce el ataque del personaje:\n");
-	scanf("%d", &ataque);
+	scanf(" %d", &player.ataque);
 
+	imprimir_personaje("ANTES", &player);
 
-	Personaje pj = { nombre, vida, ataque };
+	modificar_por_valor(player);
+	imprimir_personaje("DESPUES DE VALOR", &player);
 
-	imprimir_personaje("ANTES", &pj);
-
-	modificar_por_valor(pj);
-	imprimir_personaje("DESPUES DE VALOR", &pj);
-
-	modificar_por_puntero(&pj);
-	imprimir_personaje("DESPUES DE PUNTERO", &pj);
+	modificar_por_puntero(&player);
+	imprimir_personaje("DESPUES DE PUNTERO", &player);
 
 	return 0;
 }
-//
-//
-//#include<stdio.h>
-//#include"Personaje.h"
-//
-//int main() {
-//
-//
-//	Personaje pj = { nombre, vida, ataque };
-//
-// 
-//	imprimir_personaje(&pj);
-//
-//	modificar_por_valor(pj);
-//	imprimir_personaje(&pj);
-//
-//	modificar_por_puntero(&pj);
-//	imprimir_personaje(&pj);
-//	return 0;
-//}

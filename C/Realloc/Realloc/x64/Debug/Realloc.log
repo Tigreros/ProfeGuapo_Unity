@@ -1,0 +1,4 @@
+﻿  Realloc.c
+C:\Users\Profesor\Documents\Curso Tarde\Unity\ProfeGuapo_Unity\C\Realloc\Realloc.c(59,9): warning C4477: 'printf' : la cadena de formato '%d' requiere un argumento de tipo 'int', pero el argumento variádico 1 tiene el tipo 'int *'
+C:\Users\Profesor\Documents\Curso Tarde\Unity\ProfeGuapo_Unity\C\Realloc\Realloc.c(59,9): warning C4313: 'printf': '%d' en la cadena de formato entra en conflicto con el argumento 1 de tipo 'int *'
+  Realloc.vcxproj -> C:\Users\Profesor\Documents\Curso Tarde\Unity\ProfeGuapo_Unity\C\Realloc\x64\Debug\Realloc.exe
